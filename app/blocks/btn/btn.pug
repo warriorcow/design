@@ -1,0 +1,11 @@
+mixin btn(data)
+  if data.btn_link
+    a.btn(class=addClass('btn', data.mods, data.add_Class), href=data.btn_link, data=data.btn_data)
+     if data.icon
+      +icon({
+        icon: data.icon,
+        mods: ['btn']
+      })
+     =data.text
+  else 
+    button.btn(class=addClass('btn', data.mods, data.add_Class), type=data.type_btn, data=data.btn_data)!= data.text

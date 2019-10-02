@@ -1,0 +1,49 @@
+.steps {
+  display: flex;
+  counter-reset: section;
+  margin: 0 -10px;
+  @include breakpoint(lg) {
+    flex-wrap: wrap;
+  }
+  &__item {
+    position: relative;
+    padding: 25px 20px 25px 25px;
+    flex: 1 1 25%;
+    margin: 0 10px;
+    border: 1px solid #D3CFCF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    @include breakpoint(lg) {
+      flex: 1 1 47%;
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+    }
+    &:before {
+      content: '';
+      counter-increment: section;
+      content: counter(section);
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 1;
+      color: rgba(122, 122, 122, 0.25);
+    }
+  }
+  &__icon {
+    width: 42px;
+    height: 44px;
+    margin-bottom: 15px;
+  }
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  &__text {
+    color: #676565;
+    font-size: 14px;
+  }
+}

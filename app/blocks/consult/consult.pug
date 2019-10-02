@@ -1,0 +1,40 @@
+mixin consult(data)
+  .container-new.consult(class=addClass('consult', data.mods, data.addClass))
+    .row
+      .consult__wrap
+        .consult__pic
+          if data.mods == 'form' 
+            .consult__img(style="background-image: url("+data.bg_img+")")
+            .consult__title!=data.title
+            .consult__text!=data.text
+            form.consult__form
+              .consult__thx Спасибо за заявку! Мы скоро свяжемся с Вами.
+              input.consult__input(type="tel", placeholder="Ваш номер")
+              input.consult__input(type="email", placeholder="Ваш e-maill")
+              label.callback__check
+                input.check(type="checkbox", required)
+                | Я согласен с условиями 
+                a(href="#", target="_blank") пользовательского соглашения
+              input.btn(type="submit")
+          else
+            .consult__img(style="background-image: url("+data.bg_img+")")
+            .consult__title!=data.title
+            .consult__text!=data.text
+            +btn({
+              text: 'Получить консультацию',
+              btn_link: '#'
+            })
+        .consult__info
+          .consult__title!=data.info_title
+          if data.mods == 'form'
+            p.consult__time!=data.info_text
+            p.consult__tel!=data.info_big_text
+              
+          else
+            .consult__cards
+              each item in data.items
+                .consult__card
+                  +icon({
+                    icon: item.icon
+                  })
+                  !=item.text              

@@ -1,0 +1,23 @@
+mixin services(data)
+  .services(class=addClass('services', data.mods, data.addClass))
+    each item in data.items
+      .services__item(style="background-image: url("+item.bg_img+")")
+        .services__title!=item.title
+        .services__text!=item.text
+        if item.list
+          ul.services__list
+            each listed in item.list
+              li.services__list-item!= listed.text
+        +btn({
+          mods: item.btn_mods,
+          btn_link: item.btn_link,
+          text: item.btn_text,
+          add_Class: item.btn_class
+        })
+    if data.mods == 'grid'
+      +btn({
+        mods: ['text'],
+        btn_link: '#',
+        text: 'Больше карнизов',
+        add_Class: 'services__more'
+      })

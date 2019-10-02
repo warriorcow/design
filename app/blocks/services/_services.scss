@@ -1,0 +1,96 @@
+.services {
+  display: flex;
+  margin: 0 -10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  @include breakpoint(md) {
+    flex-wrap: wrap;
+  }
+  &_grid {
+    .services {
+      &__item {
+        flex: 1 1 30%;
+        padding: 30px;
+        @include breakpoint(lg) {
+          flex: 1 1 47%;
+        }
+      }
+      &__title {
+        font-size: 22px;
+        &:after {
+          content: '>';
+          font-weight: 900;
+          color: $locust;
+          margin-left: 30px;
+        }
+      }
+      &__text {
+        font-size: 16px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+    }
+  }
+  &__more {
+    max-width: 220px;
+    margin: 20px auto 0;
+    text-align: center;
+    flex: 1 1 100%;
+  }
+  &__item {
+    flex: 1 1 47%;
+    margin: 0 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 50px 35px;
+    color: $white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    @include breakpoint(md) {
+      padding: 40px 25px 35px;
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__title {
+    font-size: 33px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  &__text {
+    margin-bottom: 40px;
+    font-size: 24px;
+  }
+  &__list {
+    list-style: none;
+    padding-left: 0;
+  }
+  &__list-item {
+    position: relative;
+    padding-left: 20px;
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+    &:before {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      content: '';
+      height: 2px;
+      width: 8px;
+      background-color: $white;
+    }
+  }
+  &__btn {
+    display: block;
+    max-width: 230px;
+    font-size: 16px;
+    padding: 16px 15px 16px;
+    margin: 40px auto 0;
+    text-align: center;
+  }
+}

@@ -1,0 +1,302 @@
+mixin header-new(data)
+  .header-new(class=addClass('header-new', data.mods, data.addClass))
+    .header-new__burger
+      input(type="checkbox", id="hamburger")
+      label(for="hamburger")
+        i
+    .header-new__top
+      a(href="#").header-new__logo
+        img(src="./img/logo.png", alt="Logo")
+        
+      a(href="tel:+7(499)490-98-29") +7 (499) 490-98-29
+      +btn({
+        add_Class: 'header-new__btn',
+        btn_link: '#',
+        text: 'Получить консультацию'
+      })
+    .header-new__sections
+      a(href="#").header-new__link О нас
+      a(href="#").header-new__link Блог
+      a(href="#").header-new__link Партнерство
+      a(href="#").header-new__link Наши работы
+      a(href="#").header-new__link Контакты
+    +search-input()
+
+  +menu({
+    items: [{
+      name: 'Услуги',
+      link: '#',
+      icon: 'services',
+      submenu: [{
+        category: [{
+          submenu_link: '#',
+          submenu_name: 'Вертикальные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        }]
+      },{
+        category: [{
+          submenu_link: '#',
+          submenu_name: 'Вертикальные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        }]
+      },{
+        category: [{
+          submenu_link: '#',
+          submenu_name: 'Вертикальные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        }]
+      }]
+    },{
+      name: 'Жалюзи',
+      link: '#',
+      icon: 'jalousie',
+      submenu: [{
+        category: [{
+          submenu_link: '#',
+          submenu_name: 'Вертикальные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        }]
+      },{
+        category: [{
+          submenu_link: '#',
+          submenu_name: 'Вертикальные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        }]
+      },{
+        category: [{
+          submenu_link: '#',
+          submenu_name: 'Вертикальные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        }]
+      }]
+    },{
+      name: 'Шторы',
+      link: '#',
+      icon: 'curtains',
+      submenu: [{
+        category: [{
+          submenu_link: '#',
+          submenu_name: 'Вертикальные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        }]
+      },{
+        category: [{
+          submenu_link: '#',
+          submenu_name: 'Вертикальные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        }]
+      },{
+        category: [{
+          submenu_link: '#',
+          submenu_name: 'Вертикальные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        }]
+      }]
+    },{
+      name: 'Текстиль',
+      link: '#',
+      icon: 'textile',
+      submenu: [{
+        category: [{
+          submenu_link: '#',
+          submenu_name: 'Вертикальные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        }]
+      },{
+        category: [{
+          submenu_link: '#',
+          submenu_name: 'Вертикальные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        }]
+      },{
+        category: [{
+          submenu_link: '#',
+          submenu_name: 'Вертикальные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        }]
+      }]
+    },{
+      name: 'Карнизы',
+      link: '#',
+      icon: 'cornices',
+      submenu: [{
+        category: [{
+          submenu_link: '#',
+          submenu_name: 'Вертикальные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        }]
+      },{
+        category: [{
+          submenu_link: '#',
+          submenu_name: 'Вертикальные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        }]
+      },{
+        category: [{
+          submenu_link: '#',
+          submenu_name: 'Вертикальные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        }]
+      }]
+    },{
+      name: 'Сотрудничество',
+      link: '#',
+      icon: 'cooperation',
+      submenu: [{
+        category: [{
+          submenu_link: '#',
+          submenu_name: 'Вертикальные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        }]
+      },{
+        category: [{
+          submenu_link: '#',
+          submenu_name: 'Вертикальные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        }]
+      },{
+        category: [{
+          submenu_link: '#',
+          submenu_name: 'Вертикальные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Треугольные'
+        },{
+          submenu_link: '#',
+          submenu_name: 'Аркой'
+        }]
+      }]
+    }]
+  })
+      
+      

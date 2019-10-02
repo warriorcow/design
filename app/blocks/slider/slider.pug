@@ -1,0 +1,54 @@
+mixin slider(data)
+  .slider(class=addClass('slider', data.mods, data.addClass), data='slider')
+    if data.items
+      each item in data.items
+        .slider__item.slider__item_image(style="background-image: url("+item.img+")")
+          if item.title
+            .slider__title!=item.title
+          if item.btn_text
+            +btn({
+              btn_link: item.btn_link,
+              text: item.btn_text,
+              add_Class: 'slider__have'
+            })
+
+    
+
+    if data.reviews
+      each review in data.reviews
+        .slider__item.slider__item_review
+          if review.pluses
+            .slider__rating
+              each plus in review.pluses
+                .slider__plus!=plus.text
+
+          if review.minuses
+            .slider__rating
+              each minus in review.minuses
+                .slider__minus!=minus.text
+
+          if review.audio
+            .slider__media
+              .slider__media-desc Аудиозапись этого звонка 
+                span.min
+                | мин 
+                span.sec
+                | сек
+              audio.audio(controls, preload="metadata")
+                source(src=review.audio, type='audio/mp3')
+
+          if review.video
+            .slider__media
+              .slider__media-desc Видеозапись отзыва
+              +btn({
+                add_Class: 'slider__btn',
+                btn_link: review.video,
+                btn_data: 'fancybox',
+                text: 'Смотреть'
+              })
+          
+
+
+    
+
+          

@@ -1,0 +1,71 @@
+.search-input {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  max-width: 500px;
+  height: 28px;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 0!important;
+  @include breakpoint(lg) {
+    max-width: 320px;
+    height: 40px;
+    
+  }
+  &.active {
+    z-index: 3!important;
+    [type=search] {
+      transform: translateY(0%);
+      opacity: 1;
+      visibility: visible;
+      z-index: 1!important;
+      @include breakpoint(lg) {
+        transform: translateY(150%);
+        left: 40px;
+      }
+      @include breakpoint(md) {
+        left: 30px;
+      }
+    }
+  }
+
+  label {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0 0 0 16px;
+    @include breakpoint(md) {
+      padding: 0px 0px 0px 10px;
+    }
+  }
+
+  input[type=search] {
+    position: relative;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transform: translateY(-70%);
+    transition: .1s;
+    opacity: 0;
+    visibility: hidden;
+    border: 1px solid #2D2D2D;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 0 20px;
+    @include breakpoint(lg) {
+      left: 40px;
+      transform: translateY(50%);
+    }
+  }
+
+  &__icon {
+    width: 21px;
+    height: 100%;
+  }
+}

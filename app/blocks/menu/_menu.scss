@@ -1,0 +1,220 @@
+.menu {
+  z-index: 2;
+  @include breakpoint(lg) {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    max-width: 320px;
+    transform: translateX(-110%);
+    transition: .3s;
+    &.open {
+      transform: translateX(-15px);
+    }
+  }
+  &__wrap {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #ffffff;
+    @include breakpoint(lg) {
+      overflow: auto;
+      width: 100%;
+      flex-direction: column;
+      box-sizing: border-box;
+      height: calc(100vh - 57px);
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+  &__item {
+    flex: 1 1 16.66666666666667%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    @include breakpoint(lg) {
+      display: block;
+      flex: none;
+      &:after {
+        content: '>';
+        position: absolute;
+        top: 50%;
+        right: 60px;
+        font-weight: 900;
+        color: #676565;
+        transform: translateY(-50%);
+      }
+    }
+    &:not(:nth-last-child(2)) {
+      border-right: 1px solid $nevada;
+      @include breakpoint(lg) {
+        border: none;
+      }
+    }
+    &:nth-last-child(-n+3) .submenu {
+      left: auto;
+      right: 0;
+    }
+    &:hover .submenu {
+      visibility: visible;
+      opacity: 1;
+      padding-top: 40px;
+      @include breakpoint(lg) {
+        opacity: 0;
+        padding: 0;
+      }
+    }
+    svg {
+      width: 30px;
+      height: 30px;
+      margin-right: 15px;
+    }
+    > a {
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      width: 90%;
+      text-align: center;
+      justify-content: center;
+      @include breakpoint(lg) {
+        justify-content: flex-start;
+        width: 100%;
+        font-size: 14px;
+        padding: 12px 15px;
+        box-sizing: border-box;
+      }
+      .icon {
+        @include breakpoint(lg) {
+          display: none;
+        }
+      }
+    }
+    .submenu {
+      position: absolute;
+      margin: 0;
+      left: 0;
+      top: 100%;
+      width: auto;
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s;
+      padding: 20px 20px 45px;
+      display: flex;
+      list-style-type: none;
+      justify-content: flex-start;
+      background-color: #fff;
+      z-index: 1;
+      @include breakpoint(lg) {
+        position: fixed;
+        display: block;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 0 20px;
+        transform: translateX(100%);
+        transition: .3s;
+        overflow: auto;
+        height: calc(100vh - 57px);
+      }
+      &.active {
+        @include breakpoint(lg) {
+          visibility: visible;
+          opacity: 1;
+          // display: block;
+          background-color: #fff;
+          z-index: 1;
+          transform: translateX(0%);
+        }
+      }
+      &__close {
+        display: none;
+        position: relative;
+        @include breakpoint(lg) {
+          display: block;
+          &:after {
+            content: '<';
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            font-weight: 900;
+            color: #676565;
+            transform: translateY(-50%);
+          }
+        }
+        a {
+          border-bottom: 1px solid #F3F3F3;
+          margin-bottom: 10px;
+        }
+      }
+      > li {
+        padding: 0px 15px;
+        @include breakpoint(lg) {
+          padding: 0;
+        }
+        &:not(:last-of-type) {
+          border-right: 1px solid $nevada;
+          @include breakpoint(lg) {
+            border: none;
+          }
+        }
+      }
+      &__category {
+        list-style-type: none;
+        padding: 0;
+        li {
+          margin-bottom: 17px;
+          min-width: 140px;
+          @include breakpoint(lg) {
+            margin-bottom: 0;
+          }
+        }
+        a {
+          font-size: 14px;
+          display: block;
+          @include breakpoint(lg) {
+            padding: 12px 15px 12px 40px;
+          }
+        }
+      }
+      &__all {
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        @include breakpoint(lg) {
+          position: static;
+        }
+        a {
+          font-size: 14px;
+          font-weight: 700;
+          @include breakpoint(lg) {
+            display: block;
+            padding: 20px 15px 12px 40px;
+          }
+          &:after {
+            content: '>';
+            padding-left: 6px;
+          }
+        }
+      }
+    }
+  }
+  &__sections {
+    display: none;
+    background: #EEEEEE;
+    padding: 6px 0;
+    @include breakpoint(lg) {
+      display: block;
+      padding-bottom: 50px;
+    }
+    @include breakpoint(sm) {
+      height: 100%;
+    }
+    a {
+      display: block;
+      padding: 8px 15px;
+      font-size: 14px;
+    }
+  }
+}

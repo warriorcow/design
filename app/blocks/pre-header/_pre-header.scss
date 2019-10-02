@@ -1,0 +1,28 @@
+.pre-header {
+  padding-top: 120px;
+  padding-bottom: 170px;
+  display: flex;
+  flex-wrap: wrap;
+  @include breakpoint(lg) {
+    padding-top: 90px;
+    padding-bottom: 110px;
+  }
+  &__wrap {
+    flex: 1 1 50%;
+    // margin: 0 50px;
+    &:last-child {
+      flex: 0 1 450px;
+      margin-left: 80px;
+      @include breakpoint(lg) {
+        margin-left: 0;
+        margin-top: 40px;
+      }
+      @include breakpoint(sm) {
+        flex: 1 1 100%;
+      }
+    }
+    @include breakpoint(lg) {
+      flex: 1 1 100%
+    }
+  }
+}

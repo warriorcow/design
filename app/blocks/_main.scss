@@ -1,0 +1,80 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "lato", sans-serif;
+  color: $mine_shaft;
+  line-height: 1.5;
+  font-weight: 400;
+  overflow-x: hidden;
+  color: $dove_gray;
+}
+
+p {
+  margin: 0;
+  font-size: 24px;
+  @include breakpoint(md) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  &:not(:last-of-type) {
+    padding-bottom: 35px;
+  }
+}
+
+body {
+  padding-top: 140px;
+  @include breakpoint(lg) {
+    padding-top: 70px;
+  }
+  @include breakpoint(md) {
+    padding-top: 57px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit
+}
+
+.container-new {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &_header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 2;
+    .row {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.row {
+  max-width: 1170px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 60px;
+}
+
+input, button {
+  -webkit-appearance: none;
+  border: 0;
+  outline: none;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel] {
+  border: 2px solid transparent;
+  &.error {
+    border-color: red
+  }
+}

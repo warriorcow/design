@@ -1,0 +1,18 @@
+mixin callback(data)
+  .container-new.callback(style="background-image: url("+data.img+")")
+    .row.callback__wrap
+      .callback__thx Спасибо за заявку! Мы скоро свяжемся с Вами. 
+      .callback__title!=data.title
+      form.callback__form
+        each item in data.items
+          input(type=item.type, placeholder=item.placeholder).callback__input
+        +btn({
+          text: 'Отправить',
+          type: 'submit',
+          add_Class: 'callback__btn callback__input'
+        })
+        label.callback__check
+          input.check(type="checkbox", required)
+          | Я согласен с условиями 
+          a(href="#", target="_blank") пользовательского соглашения
+      

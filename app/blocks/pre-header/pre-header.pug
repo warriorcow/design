@@ -1,0 +1,21 @@
+mixin pre-header(data)
+  .pre-header
+    .pre-header__wrap
+      +title({
+        text: data.title,
+        tag: 'h1',
+        mods: ['h1', 'white'],
+        subtext: data.subtext
+      })
+      if block 
+        block
+    
+    .pre-header__wrap
+      +form({
+          title: 'Получите бесплатную консультацию у дизайнеров ',
+          btn_text: 'Получить консультацию',
+          items: [{
+            type: 'tel',
+            placeholder: 'Ваш телефон'
+          }]
+        })

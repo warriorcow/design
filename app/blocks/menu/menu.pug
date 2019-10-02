@@ -1,0 +1,24 @@
+mixin menu(data)
+  .menu
+    .menu__wrap
+      each item in data.items
+        .menu__item
+          a(href=item.link)
+            +icon({icon: item.icon})
+            != item.name
+          ul.submenu
+            li.submenu__category.submenu__close
+              a(href="javascript:void(0)")!= item.name
+            each e in item.submenu
+              ul.submenu__category
+                each r in e.category
+                  li
+                    a(href=r.submenu_link)!= r.submenu_name
+            li.submenu__all
+              a(href="#") Все виды жалюзи
+      .menu__sections
+        a(href="#").header-new__link О нас
+        a(href="#").header-new__link Блог
+        a(href="#").header-new__link Партнерство
+        a(href="#").header-new__link Наши работы
+        a(href="#").header-new__link Контакты

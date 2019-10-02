@@ -1,0 +1,10 @@
+mixin search-input(data)
+  form.search-input
+
+    input(type="search", placeholder="Поиск...", id="search")
+    label(for="search", searchOpen)
+      +icon({
+        add_Class: 'search-input__icon',
+        icon: 'search'
+      })
+    

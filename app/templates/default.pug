@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto&display=swap")
+    link(rel="stylesheet", href="./css/libs.css")
+    link(rel="stylesheet", href="./css/style.css")
+    title NEW PROJECT
+  body
+    block vars
+      include /app/blocks/header-new/header-new
+      include /app/blocks/title/title
+      include /app/blocks/btn/btn
+      include /app/blocks/list/list
+      include /app/blocks/form/form
+      include /app/blocks/icon/icon
+      include /app/blocks/search-input/search-input
+      include /app/blocks/menu/menu
+      include /app/blocks/pre-header/pre-header
+      include /app/blocks/steps/steps
+      include /app/blocks/services/services
+      include /app/blocks/card/card
+      include /app/blocks/callback/callback
+      include /app/blocks/slider/slider
+      include /app/blocks/consult/consult
+
+    block header
+      header
+        .container-new.container-new_header
+          .row
+            +header-new({
+            })
+    
+    block main
+      main
+    
+    block footer 
+      div(style='display: none;')
+        include ../../dist/img/icons/icons.svg
+      script(src="../js/libs.js")
+      script(src="../js/scripts.js")

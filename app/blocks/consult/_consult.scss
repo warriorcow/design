@@ -1,0 +1,145 @@
+.consult {
+  background: #EAEAEA;
+  &__wrap {
+    display: flex;
+    @include breakpoint(lg) {
+      flex-direction: column;
+      margin: 0 -15px;
+    }
+  }
+  &__pic {
+    position: relative;
+    width: 40%;
+    padding: 40px 25px 40px 0;
+    color: $white;
+    z-index: 2;
+    box-sizing: border-box;
+    @include breakpoint(lg) {
+      width: 100%;
+      padding: 40px 15px;
+    }
+  }
+  &__title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+  &__text {
+    font-size: 18px;
+    margin-bottom: 35px;
+  }
+  &__img {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    width: 50vw;
+    @include breakpoint(lg) {
+      width: 100%;
+    }
+  }
+  &__info {
+    color: #616E77;
+    padding: 40px 0 40px 70px;
+    box-sizing: border-box;
+    @include breakpoint(lg) {
+      width: 100%;
+      padding: 40px 15px;
+    }
+  }
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 10px;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+    .icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 30px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
+    margin: 0 -7.5px;
+    > * {
+      flex: 1 1 47%;
+      margin: 0 7.5px 15px;
+    }
+  }
+  &__input {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 17px 15px 15px;
+    box-sizing: border-box;
+    font-size: 16px;
+    &::placeholder {
+      color: #393939;
+    }
+  }
+  &__time {
+    padding-top: 30px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  &__tel {
+    font-size: 30px;
+    transition: 1s;
+    font-weight: 700;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__thx {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 22px;
+    display: none;
+  }
+  &_form {
+    
+    .btn {
+      max-width: 193px;
+      padding: 16px 15px;
+      font-size: 16px;
+    }
+    .consult {
+      &__pic {
+        width: 90%;
+        @include breakpoint(lg) {
+          width: 100%;
+          padding: 40px 15px;
+        }
+      }
+      &__img {
+        width: 60vw;
+        @include breakpoint(lg) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

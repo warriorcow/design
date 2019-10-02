@@ -1,0 +1,4 @@
+mixin list(data)
+  ul.list(class=addClass('list', data.mods, data.addClass))
+    each item in data.items
+      li.list__item!= item.text

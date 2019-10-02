@@ -1,0 +1,10 @@
+mixin steps(data)
+  .steps
+    each item in data.items
+      .steps__item
+        +icon({
+          icon: item.icon,
+          add_Class: 'steps__icon'
+        })
+        .steps__title!=item.title
+        .steps__text!=item.text

@@ -1,0 +1,124 @@
+.header-new {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 15px 80px 15px 0;
+  > * {
+    z-index: 1;
+  }
+  @include breakpoint(lg) {
+    padding-right: 40px;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    max-height: 40px;
+    font-size: 16px;
+    margin-left: -16px;
+    margin-right: -16px;
+    @include breakpoint(lg) {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      justify-content: space-around;
+      
+    }
+    @include breakpoint(md) {
+      width: 90%;
+      font-size: 12px;
+    }
+    > * {
+      padding-left: 16px;
+      padding-right: 16px;
+      @include breakpoint(md) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+  &__logo {
+    margin-right: 60px;
+    img {
+      width: 100%;
+    }
+    @include breakpoint(xl) {
+      margin-right: 20px;
+    }
+    @include breakpoint(md) {
+      max-width: 69px;
+      margin-right: 0;
+    }
+  }
+  &__sections {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-left: -13px;
+    margin-right: -13px;
+    z-index: 1;
+    @include breakpoint(lg) {
+      display: none;
+    }
+    > * {
+      padding-left: 13px;
+      padding-right: 13px;
+    }
+  }
+  &__btn {
+    margin-left: 20px;
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+  &__burger {
+    display: none;
+    overflow: hidden;
+    align-items: center;
+    @include breakpoint(lg) {
+      display: flex;
+    }
+    label {
+      display: inline-block;
+      cursor: pointer;
+      min-width: 34px;
+      height: 27px;
+      position: relative;
+      &:before,
+      &:after,
+      i {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: $mine_shaft;
+        transition: .3s;
+        will-change: transform;
+      }
+      &:before {
+        top: 0;
+      }
+      &:after {
+        bottom: 0;
+      }
+      i {
+        top: 12px;
+      }
+    }
+    #hamburger {
+      display: none;
+      &:checked {
+        + label {
+          &:before {
+            transform: translateY(12px) rotate(-45deg);
+          }
+          &:after {
+            transform: translateY(-12px) rotate(45deg);
+          }
+          i {
+            transform: scale(0, 1);
+          }
+        }
+      }
+    }
+  }
+}

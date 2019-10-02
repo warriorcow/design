@@ -1,0 +1,92 @@
+.advantages {
+  background-color: #F9F9F9;
+  &_gray {
+    background-color: #F0F0F0;
+  }
+  .row {
+    margin-bottom: 0;
+  }
+  &__row {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include breakpoint(lg) {
+      padding-bottom: 15px;
+      padding-top: 15px;
+    }
+    &_reverse {
+      margin-bottom: 60px;
+      .advantages {
+        &__wrap {  
+          padding-left: 0;
+          padding-right: 35%;
+          counter-reset: advantages 3;
+          @include breakpoint(lg) {
+            padding-right: 0;
+          }
+        }
+        &__pic {
+          left: 70%;
+          right: auto;
+        }
+      }
+    }
+  }
+  .title {
+    padding-left: 35%;    
+    box-sizing: border-box;
+    @include breakpoint(lg) {
+      padding-left: 0;
+    }
+  }
+  &__wrap {
+    counter-reset: advantages;
+    display: flex;
+    position: relative;    
+    padding-left: 35%;
+    @include breakpoint(lg) {
+      padding-left: 0;
+    }
+    @include breakpoint(md) {
+      flex-wrap: wrap;
+    }
+  }
+  &__pic {
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 46vw;
+    height: 100%;
+    right: 70%;
+    z-index: 1;
+    top: 0;
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+  &__item {
+    font-size: 15px;
+    padding: 0px 25px 50px;
+    @include breakpoint(md) {
+      padding-right: 0;
+      padding-left: 0;
+      display: flex;
+      align-items: center;
+    }
+    &:before {
+      counter-increment: advantages;
+      content: counter(advantages);
+      font-size: 96px;
+      color: rgba(122, 122, 122, 0.25);
+      font-weight: 900;
+      display: block;
+      margin-bottom: 30px;
+      line-height: 1;
+      @include breakpoint(md) {
+        margin-bottom: 0;
+        margin-right: 20px;
+      }
+    }
+  }
+}
