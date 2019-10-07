@@ -1,8 +1,12 @@
 .icon {
-  &_btn {
-    width: 8px;
-    height: 8px;
-    margin-right: 5px;
-    fill: $black
+  &_lk {
+    width: 19px;
+    height: 25px;
+    fill: $white;
+  }
+  &_cart {
+    width: 24px;
+    height: 20px;
+    fill: $black;
   }
 }

@@ -3,11 +3,17 @@ mixin form(data)
     .form__title!=data.title
     each item in data.items
       input(type=item.type, placeholder=item.placeholder).form__input
+    .form__box
+      label.btn.form__btn.btn_file
+        span Прикрепить фото
+        input(type="file", multiple="multiple", accept="image/x-png,image/gif,image/jpeg", enctype='multipart/form-data')
+        
+      +btn({
+        add_Class: 'form__btn',
+        type_btn: 'button',
+        text: data.btn_text
+      })
     .form__policy Я согласен с условиями 
       a(href="#", target="_blank") пользовательского соглашения
-    +btn({
-      add_Class: 'form__btn',
-      type_btn: 'submit',
-      text: data.btn_text
-    })
+      
     .form__thx Спасибо за заявку! #[br]Мы скоро свяжемся с Вами. 

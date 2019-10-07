@@ -1,0 +1,15 @@
+.modal
+  .modal__content(style="background-image: url(./img/banner-1.png)", data-modal="service")
+    .modal__close
+    +form({
+      addClass: 'modal__form',
+      title: 'Получите бесплатную консультацию у дизайнеров ',
+      btn_text: 'Получить консультацию',
+      items: [{
+        type: 'text',
+        placeholder: 'Вашe имя'
+      },{
+        type: 'tel',
+        placeholder: 'Ваш телефон'
+      }]
+    })

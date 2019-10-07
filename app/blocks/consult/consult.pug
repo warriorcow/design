@@ -22,7 +22,8 @@ mixin consult(data)
             .consult__text!=data.text
             +btn({
               text: 'Получить консультацию',
-              btn_link: '#'
+              btn_link: '#',
+              js: 'showModal("service")'
             })
         .consult__info
           .consult__title!=data.info_title

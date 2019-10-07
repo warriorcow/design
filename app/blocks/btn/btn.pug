@@ -1,6 +1,6 @@
 mixin btn(data)
   if data.btn_link
-    a.btn(class=addClass('btn', data.mods, data.add_Class), href=data.btn_link, data=data.btn_data)
+    a.btn(class=addClass('btn', data.mods, data.add_Class), href=data.btn_link, data=data.btn_data, onclick=data.js)
      if data.icon
       +icon({
         icon: data.icon,
@@ -8,4 +8,4 @@ mixin btn(data)
       })
      =data.text
   else 
-    button.btn(class=addClass('btn', data.mods, data.add_Class), type=data.type_btn, data=data.btn_data)!= data.text
+    button.btn(class=addClass('btn', data.mods, data.add_Class), type=data.type_btn, onclick=data.js, data=data.btn_data)!= data.text
