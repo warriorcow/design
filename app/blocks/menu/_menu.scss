@@ -118,6 +118,9 @@
         overflow: auto;
         height: calc(100vh - 57px);
       }
+      &__box {
+        display: flex;
+      }
       &.active {
         @include breakpoint(lg) {
           visibility: visible;
@@ -153,12 +156,12 @@
         @include breakpoint(lg) {
           padding: 0;
         }
-        &:not(:last-of-type) {
-          border-right: 1px solid $nevada;
-          @include breakpoint(lg) {
-            border: none;
-          }
-        }
+        // &:not(:last-of-type) {
+        //   border-right: 1px solid $nevada;
+        //   @include breakpoint(lg) {
+        //     border: none;
+        //   }
+        // }
       }
       &__category {
         list-style-type: none;
