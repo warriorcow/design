@@ -22,9 +22,9 @@ block main
             title: 'Выезд на объект',
             text: 'Опытный дизайнер помогут создать уют в вашем доме',
             bg_img: '../img/service-1.png',
-            btn_text: 'Больше карнизов',
             btn_link: '#',
             btn_mods: ['text'],
+            btn_class: 'services__all',
             list: [{
               text: 'С узором'
             },{
@@ -36,9 +36,9 @@ block main
             title: 'Выезд на объект',
             text: 'Опытный дизайнер помогут создать уют в вашем доме',
             bg_img: '../img/service-1.png',
-            btn_text: 'Вызвать дизайнера на дом',
             btn_link: '#',
             btn_mods: ['text'],
+            btn_class: 'services__all',
             list: [{
               text: 'Уникальные шторы под любой интерьер: офисы, квартиры, коттеджи.'
             },{
@@ -48,9 +48,9 @@ block main
             title: 'Выезд на объект',
             text: 'Опытный дизайнер помогут создать уют в вашем доме',
             bg_img: '../img/service-1.png',
-            btn_text: 'Вызвать дизайнера на дом',
             btn_link: '#',
             btn_mods: ['text'],
+            btn_class: 'services__all',
             list: [{
               text: 'Уникальные шторы под любой интерьер: офисы, квартиры, коттеджи.'
             },{
@@ -60,9 +60,9 @@ block main
             title: 'Выезд на объект',
             text: 'Опытный дизайнер помогут создать уют в вашем доме',
             bg_img: '../img/service-1.png',
-            btn_text: 'Вызвать дизайнера на дом',
             btn_link: '#',
             btn_mods: ['text'],
+            btn_class: 'services__all',
             list: [{
               text: 'Уникальные шторы под любой интерьер: офисы, квартиры, коттеджи.'
             },{
@@ -72,9 +72,9 @@ block main
             title: 'Выезд на объект',
             text: 'Опытный дизайнер помогут создать уют в вашем доме',
             bg_img: '../img/service-1.png',
-            btn_text: 'Вызвать дизайнера на дом',
             btn_link: '#',
             btn_mods: ['text'],
+            btn_class: 'services__all',
             list: [{
               text: 'Уникальные шторы под любой интерьер: офисы, квартиры, коттеджи.'
             },{
@@ -84,9 +84,9 @@ block main
             title: 'Выезд на объект',
             text: 'Опытный дизайнер помогут создать уют в вашем доме',
             bg_img: '../img/service-1.png',
-            btn_text: 'Вызвать дизайнера на дом',
             btn_link: '#',
             btn_mods: ['text'],
+            btn_class: 'services__all',
             list: [{
               text: 'Уникальные шторы под любой интерьер: офисы, квартиры, коттеджи.'
             },{
@@ -97,47 +97,41 @@ block main
 
       .container-new  
         .row
-          .category
-            a.category__item(href="#")
-              +icon({
-                icon: 'category-cornices'
-              })
-              | Карнизы
-            a.category__item(href="#")
-              +icon({
-                icon: 'category-package'
-              })
-              | Еще что-то
-            a.category__item(href="#")
-              +icon({
-                icon: 'category-curtains'
-              })
-              | Держатели для штор
-            a.category__item(href="#")
-              +icon({
-                icon: 'category-package'
-              })
-              | Еще что-то
-            a.category__item(href="#")
-              +icon({
-                icon: 'category-cornices'
-              })
-              | Эркерные
-            a.category__item(href="#")
-              +icon({
-                icon: 'category-package'
-              })
-              | Угловые
-            a.category__item(href="#")
-              +icon({
-                icon: 'category-curtains'
-              })
-              | Держатели для штор
-            a.category__item(href="#")
-              +icon({
-                icon: 'category-package'
-              })
-              | Еще что-то
+          +category({
+            items: [{
+              icon: 'category-cornices',
+              text: 'Карнизы',
+              link: '#'
+            },{
+              icon: 'category-package',
+              text: 'Еще что-то',
+              link: '#'
+            },{
+              icon: 'category-curtains',
+              text: 'Держатели для штор',
+              link: '#'
+            },{
+              icon: 'category-package',
+              text: 'Еще что-то',
+              link: '#'
+            },{
+              icon: 'category-cornices',
+              text: 'Эркерные',
+              link: '#'
+            },{
+              icon: 'category-package',
+              text: 'Угловые',
+              link: '#'
+            },{
+              icon: 'category-curtains',
+              text: 'Держатели для штор',
+              link: '#'
+            },{
+              icon: 'category-package',
+              text: 'Еще что-то',
+              link: '#'
+            }]
+          })
 
     +consult({
       bg_img: '../img/banner-1.png',
@@ -165,27 +159,25 @@ block main
         })
         p В нашем ассортименте есть различные аксессвуары, которые можно подобрать в дополнение к вашим шторам
 
-        .category
-          a.category__item(href="#")
-            +icon({
-              icon: 'category-cornices'
-            })
-            | Карнизы
-          a.category__item(href="#")
-            +icon({
-              icon: 'category-package'
-            })
-            | Еще что-то
-          a.category__item(href="#")
-            +icon({
-              icon: 'category-curtains'
-            })
-            | Держатели для штор
-          a.category__item(href="#")
-            +icon({
-              icon: 'category-package'
-            })
-            | Еще что-то
+        +category({
+          items: [{
+            icon: 'category-cornices',
+            text: 'Карнизы',
+            link: '#'
+          },{
+            icon: 'category-package',
+            text: 'Еще что-то',
+            link: '#'
+          },{
+            icon: 'category-curtains',
+            text: 'Держатели для штор',
+            link: '#'
+          },{
+            icon: 'category-package',
+            text: 'Еще что-то',
+            link: '#'
+          }]
+        })
 
 
     .container-new
@@ -211,7 +203,7 @@ block main
           },{
             title: 'Замер',
             text: 'Мастер закрепит карниз и повесит шторы',
-            icon: 'fabriс'
+            icon: 'fabric'
           }]
         })
 
@@ -230,16 +222,16 @@ block main
         mods: ['opacity'],
         items: [{
           img: '../img/service-1.png',
-          btn_text: 'Хочу также',
-          btn_link: 'javascript:void(0)',
-          js: 'showModal("service")'
-        },{
-          img: '../img/service-1.png',
+          title: 'Монтаж полиуретановых карнизов'
         },{
           img: '../img/service-1.png',
           title: 'Монтаж полиуретановых карнизов'
         },{
           img: '../img/service-1.png',
+          title: 'Монтаж полиуретановых карнизов'
+        },{
+          img: '../img/service-1.png',
+          title: 'Монтаж полиуретановых карнизов'
         },{
           img: '../img/service-1.png',
           title: 'Монтаж полиуретановых карнизов'

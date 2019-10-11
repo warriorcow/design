@@ -1,5 +1,5 @@
-var searchBtn = $('[searchOpen]');
-var searchForm = $('[searchOpen]').parent();
+var searchBtn = $('[data-js=searchOpen]');
+var searchForm = $('[data-js=searchOpen]').parent();
 
 searchBtn.click(function(){
   searchForm.toggleClass('active');

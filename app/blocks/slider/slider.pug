@@ -1,19 +1,19 @@
 mixin slider(data)
-  .slider(class=addClass('slider', data.mods, data.addClass), data='slider')
+  .slider(class=addClass('slider', data.mods, data.addClass), data-js='slider')
     if data.items
       each item in data.items
         .slider__item.slider__item_image(style="background-image: url("+item.img+")")
+          if item.link
+            a.slider__link(href=item.link)
           if item.title
             .slider__title!=item.title
-          if item.btn_text
-            +btn({
-              btn_link: item.btn_link,
-              text: item.btn_text,
-              js: item.js,
-              add_Class: 'slider__have'
-            })
-
-    
+          +btn({
+            btn_link: item.btn_link,
+            text: 'Хочу также',
+            btn_data: item.btn_data,
+            js: item.js,
+            add_Class: 'slider__have'
+          })
 
     if data.reviews
       each review in data.reviews

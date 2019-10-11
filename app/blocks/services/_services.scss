@@ -10,9 +10,14 @@
     .services {
       &__item {
         flex: 1 1 30%;
-        padding: 30px;
+        padding: 30px 30px 60px 30px;
         @include breakpoint(lg) {
           flex: 1 1 47%;
+        }
+        a {
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
       &__title {
@@ -36,6 +41,9 @@
     margin: 20px auto 0;
     text-align: center;
     flex: 1 1 100%;
+    @include breakpoint(md) {
+      max-width: 400px;
+    }
   }
   &__item {
     flex: 1 1 47%;
@@ -49,6 +57,7 @@
     overflow: hidden;
     margin-bottom: 20px;
     box-sizing: border-box;
+    position: relative;
     @include breakpoint(md) {
       padding: 40px 25px 35px;
       &:not(:last-of-type) {
@@ -92,5 +101,9 @@
     padding: 16px 15px 16px;
     margin: 40px auto 0;
     text-align: center;
+  }
+  &__all {
+    position: absolute;
+    bottom: 30px;
   }
 }

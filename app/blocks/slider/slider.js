@@ -1,27 +1,24 @@
-$('[data=fancybox]').fancybox();
+$('[data-js=fancybox]').fancybox();
 
 
-$('[data=slider]').slick({
+$('[data-js=slider]').slick({
   centerMode: true,
   rows: false,
   slidesToShow: 1,
   variableWidth: true,
   dots: true,
   arrows: false,
-  // infinite: false,
   responsive: [{
-    breakpoint: 1080,
+    breakpoint: 640,
     settings: {
       variableWidth: false,
-      centerMode: false,
-      adaptiveHeight: true
+      centerMode: false
     }
   }]
 });
 
 
 $('.audio').each(function(){
-  // let audioCurrentTime = this;
 
   this.addEventListener('loadedmetadata', function() {
     var _this = this.duration;

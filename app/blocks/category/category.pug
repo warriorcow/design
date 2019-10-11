@@ -1,0 +1,8 @@
+mixin category(data)
+  .category.swiper-container
+    .swiper-wrapper
+      each item in data.items
+        a.category__item.swiper-slide(href=item.link)
+          +icon({icon: item.icon})
+          !=item.text
+    .swiper-scrollbar

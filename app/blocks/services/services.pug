@@ -2,16 +2,18 @@ mixin services(data)
   .services(class=addClass('services', data.mods, data.addClass))
     each item in data.items
       .services__item(style="background-image: url("+item.bg_img+")")
-        .services__title!=item.title
+        .services__title
+          a(href="#")!=item.title
         .services__text!=item.text
         if item.list
           ul.services__list
             each listed in item.list
-              li.services__list-item!= listed.text
+              li.services__list-item
+                a(href="#")!= listed.text
         +btn({
           mods: item.btn_mods,
           btn_link: item.btn_link,
-          text: item.btn_text,
+          text: 'Смотреть все',
           add_Class: item.btn_class,
           js: item.js
         })

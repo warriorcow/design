@@ -2,7 +2,7 @@ mixin search-input(data)
   form.search-input
 
     input(type="search", placeholder="Поиск...", id="search")
-    label(for="search", searchOpen)
+    label(for="search", data-js='searchOpen')
       +icon({
         add_Class: 'search-input__icon',
         icon: 'search'

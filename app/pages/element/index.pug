@@ -46,16 +46,16 @@ block main
         mods: ['opacity'],
         items: [{
           img: '../img/service-1.png',
-          btn_text: 'Хочу также',
-          js: "showModal('service')",
-          btn_link: 'javascript:void(0)'
-        },{
-          img: '../img/service-1.png',
+          title: 'Монтаж полиуретановых карнизов'
         },{
           img: '../img/service-1.png',
           title: 'Монтаж полиуретановых карнизов'
         },{
           img: '../img/service-1.png',
+          title: 'Монтаж полиуретановых карнизов'
+        },{
+          img: '../img/service-1.png',
+          title: 'Монтаж полиуретановых карнизов'
         },{
           img: '../img/service-1.png',
           title: 'Монтаж полиуретановых карнизов'
@@ -100,28 +100,21 @@ block main
           mods: ['h2']
         })
         p В нашем ассортименте есть различные аксессвуары, которые можно подобрать в дополнение к вашим шторам
-
-        .category
-          a.category__item(href="#")
-            +icon({
-              icon: 'category-cornices'
-            })
-            | Карнизы
-          a.category__item(href="#")
-            +icon({
-              icon: 'category-package'
-            })
-            | Еще что-то
-          a.category__item(href="#")
-            +icon({
-              icon: 'category-curtains'
-            })
-            | Держатели для штор
-          a.category__item(href="#")
-            +icon({
-              icon: 'category-package'
-            })
-            | Еще что-то
+        +category({
+          items: [{
+            icon: 'category-cornices',
+            text: 'Карнизы'
+          },{
+            icon: 'category-package',
+            text: 'Еще что-то'
+          },{
+            icon: 'category-curtains',
+            text: 'Еще что-то'
+          },{
+            icon: 'category-package',
+            text: 'Еще что-то'
+          }]
+        })
 
     .container-new
       .row
@@ -134,16 +127,16 @@ block main
         mods: ['opacity'],
         items: [{
           img: '../img/service-1.png',
-          btn_text: 'Хочу также',
-          js: "showModal('service')",
-          btn_link: 'javascript:void(0)'
-        },{
-          img: '../img/service-1.png',
+          title: 'Монтаж полиуретановых карнизов'
         },{
           img: '../img/service-1.png',
           title: 'Монтаж полиуретановых карнизов'
         },{
           img: '../img/service-1.png',
+          title: 'Монтаж полиуретановых карнизов'
+        },{
+          img: '../img/service-1.png',
+          title: 'Монтаж полиуретановых карнизов'
         },{
           img: '../img/service-1.png',
           title: 'Монтаж полиуретановых карнизов'
@@ -166,7 +159,7 @@ block main
 
         p Равным образом рамки и место обучения кадров позволяет оценить значение новых предложений. 
       
-    .container-new
+    //- .container-new
       .row
         +title({
           text: 'Каталог карнизов',
@@ -177,16 +170,16 @@ block main
         mods: ['opacity'],
         items: [{
           img: '../img/service-1.png',
-          btn_text: 'Хочу также',
-          js: "showModal('service')",
-          btn_link: 'javascript:void(0)'
-        },{
-          img: '../img/service-1.png',
+          title: 'Монтаж полиуретановых карнизов'
         },{
           img: '../img/service-1.png',
           title: 'Монтаж полиуретановых карнизов'
         },{
           img: '../img/service-1.png',
+          title: 'Монтаж полиуретановых карнизов'
+        },{
+          img: '../img/service-1.png',
+          title: 'Монтаж полиуретановых карнизов'
         },{
           img: '../img/service-1.png',
           title: 'Монтаж полиуретановых карнизов'
