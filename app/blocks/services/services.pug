@@ -13,9 +13,9 @@ mixin services(data)
         +btn({
           mods: item.btn_mods,
           btn_link: item.btn_link,
-          text: 'Смотреть все',
+          text: item.btn_text,
           add_Class: item.btn_class,
-          js: item.js
+          btn_data: item.btn_data
         })
     if data.mods == 'grid'
       +btn({

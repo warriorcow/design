@@ -56,6 +56,7 @@
         background: rgba(255, 255, 255, 0.772);
         top: -30px;
         right: 0;
+        z-index: 2;
       }
       &:after {
         content: '%';
@@ -72,9 +73,16 @@
         font-size: 58px;
         color: $locust;
         font-weight: 700;
-        
+        z-index: 2;
       }
     }
+  }
+  &__link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
   &__info {
     padding: 35px 22px;
@@ -82,6 +90,7 @@
     color: #676565;
   }
   &__img {
+    position: relative;
     height: 170px;
     background-position: center;
     background-size: cover;

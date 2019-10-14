@@ -1,6 +1,4 @@
 $('[data-js=fancybox]').fancybox();
-
-
 $('[data-js=slider]').slick({
   centerMode: true,
   rows: false,
@@ -16,8 +14,6 @@ $('[data-js=slider]').slick({
     }
   }]
 });
-
-
 $('.audio').each(function(){
 
   this.addEventListener('loadedmetadata', function() {
@@ -27,10 +23,7 @@ $('.audio').each(function(){
     
     $(this).parent().find('.min').html(minutes);
     $(this).parent().find('.sec').html(seconds);
-    console.log(minutes, seconds)
     
   });
-  
-  
-})
+});
 

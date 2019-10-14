@@ -3,6 +3,7 @@ mixin card(data)
     each item in data.items
       .card__item(class=item.add_Class)
         .card__img(style="background-image: url("+item.img+")")
+          a.card__link(href=item.link)
         .card__info
           .card__title!=item.title
           if item.text
@@ -14,5 +15,6 @@ mixin card(data)
             btn_link: item.btn_link,
             text: item.btn_text,
             add_Class: 'card__btn',
-            js: item.js
+            js: item.js,
+            btn_data: 'consultate'
           })

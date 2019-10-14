@@ -1,6 +1,7 @@
 mixin form(data)
   form.form(class=addClass('form', data.mods, data.addClass))
     .form__title!=data.title
+    input.form__name(type="hidden", value="")
     each item in data.items
       input(type=item.type, placeholder=item.placeholder).form__input
     .form__box
