@@ -3,13 +3,19 @@ mixin services(data)
     each item in data.items
       .services__item(style="background-image: url("+item.bg_img+")")
         .services__title
-          a(href="#")!=item.title
+          if data.mods == 'grid'
+            a(href="#")!=item.title
+          else
+            !=item.title
         .services__text!=item.text
         if item.list
           ul.services__list
             each listed in item.list
               li.services__list-item
-                a(href="#")!= listed.text
+                if data.mods == 'grid'
+                  a(href="#")!= listed.text
+                else
+                  != listed.text
         +btn({
           mods: item.btn_mods,
           btn_link: item.btn_link,
