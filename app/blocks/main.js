@@ -14,6 +14,7 @@ var swiper = new Swiper('.swiper-container.category', {
   scrollbar: {
     el: '.swiper-scrollbar',
     hide: false,
+    draggable: true,
   },
   // breakpoints: {
   //   640: {
