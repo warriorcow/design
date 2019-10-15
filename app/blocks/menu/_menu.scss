@@ -182,8 +182,10 @@
         a {
           font-size: 14px;
           display: block;
+          margin-right: 25px;
           @include breakpoint(lg) {
             padding: 12px 15px 12px 40px;
+            margin-right: 0;
           }
         }
       }

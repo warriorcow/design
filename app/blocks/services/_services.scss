@@ -9,7 +9,7 @@
   &_grid {
     .services {
       &__item {
-        flex: 1 1 30%;
+        flex: 0 1 calc(33.3% - 20px);
         padding: 30px 30px 60px 30px;
         @include breakpoint(lg) {
           flex: 1 1 47%;
@@ -37,13 +37,10 @@
     }
   }
   &__more {
-    max-width: 220px;
+    max-width: 100%;
     margin: 20px auto 0;
     text-align: center;
     flex: 1 1 100%;
-    @include breakpoint(md) {
-      max-width: 400px;
-    }
   }
   &__item {
     flex: 1 1 47%;
