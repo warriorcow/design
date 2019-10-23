@@ -68,6 +68,7 @@
   &__item {
     font-size: 15px;
     padding: 0px 25px 50px;
+    flex: 1 1 33.33%;
     @include breakpoint(md) {
       padding-right: 0;
       padding-left: 0;

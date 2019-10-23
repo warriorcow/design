@@ -36,7 +36,7 @@ function showModal(e, thisName) {
   });
 }
 
-$('.btn[data-js]').each(function(){
+$('.btn[data-js]').not('.btn[data-js=fancybox]').each(function(){
   $(this).click(function(){
     showModal(this.getAttribute('data-js'), this.previousElementSibling.textContent)
   }) 

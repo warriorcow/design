@@ -35,7 +35,7 @@ mixin slider(data)
                 | мин 
                 span.sec
                 | сек
-              audio.audio(controls, preload="metadata")
+              audio.audio(controls, controlsList="nodownload", preload="metadata")
                 source(src=review.audio, type='audio/mp3')
 
           if review.video

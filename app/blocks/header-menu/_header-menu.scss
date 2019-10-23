@@ -1,5 +1,5 @@
-.menu {
-  z-index: 2;
+.header-menu {
+  z-index: 98;
   @include breakpoint(lg) {
     position: fixed;
     overflow: hidden;

@@ -1,13 +1,13 @@
 
 $('#hamburger').change(function(){
   if ( $(this).prop("checked") == true ) {
-    $('.menu').addClass('open');
+    $('.header-menu').addClass('open');
   } else {
-    $('.menu').removeClass('open');
+    $('.header-menu').removeClass('open');
   }
 })
 
-$('.menu__item a').click(function(){
+$('.header-menu__item a').click(function(){
   $(this).next().toggleClass('active');
 
 })

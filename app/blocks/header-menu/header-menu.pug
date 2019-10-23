@@ -1,8 +1,8 @@
-mixin menu(data)
-  .menu
-    .menu__wrap
+mixin header-menu(data)
+  .header-menu
+    .header-menu__wrap
       each item in data.items
-        .menu__item
+        .header-menu__item
           a(href=item.link)
             +icon({icon: item.icon})
             != item.name
@@ -18,7 +18,7 @@ mixin menu(data)
                         a(href=r.submenu_link)!= r.submenu_name
               li.submenu__all
                 a(href="#") Все виды жалюзи
-      .menu__sections
+      .header-menu__sections
         a(href="#").header-new__link О нас
         a(href="#").header-new__link Блог
         a(href="#").header-new__link Партнерство

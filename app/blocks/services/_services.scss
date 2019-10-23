@@ -10,7 +10,7 @@
     .services {
       &__item {
         flex: 0 1 calc(33.3% - 20px);
-        padding: 30px 30px 60px 30px;
+        padding: 30px 30px 80px 30px;
         @include breakpoint(lg) {
           flex: 1 1 47%;
         }
@@ -48,7 +48,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 40px 50px 35px;
+    padding: 40px 50px 120px;
     color: $white;
     border-radius: 10px;
     overflow: hidden;
@@ -56,7 +56,7 @@
     box-sizing: border-box;
     position: relative;
     @include breakpoint(md) {
-      padding: 40px 25px 35px;
+      padding: 40px 25px 120px;
       &:not(:last-of-type) {
         margin-bottom: 20px;
       }
@@ -93,11 +93,15 @@
   }
   &__btn {
     display: block;
+    position: absolute;
+    width: 100%;
     max-width: 230px;
     font-size: 16px;
     padding: 16px 15px 16px;
-    margin: 40px auto 0;
-    text-align: center;
+    text-align: center;    
+    left: 50%;
+    bottom: 35px;
+    transform: translateX(-50%);
   }
   &__all {
     position: absolute;
