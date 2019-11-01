@@ -1,5 +1,5 @@
 function thx(e) {
-  $(e).fadeIn().css('display', 'flex').siblings().css({
+  e.find('.form__thx').fadeIn().css('display', 'flex').siblings().css({
     'opacity': '0',
     'visibility': 'hidden'
   });
@@ -15,16 +15,21 @@ var swiper = new Swiper('.swiper-container.category', {
     el: '.swiper-scrollbar',
     hide: false,
     draggable: true,
-  },
-  // breakpoints: {
-  //   640: {
-  //     // slidesPerView: 2
-  //   },
-  //   768: {
-  //     // slidesPerView: 3,
-  //   },
-  //   1080: {
-  //     // slidesPerView: 'auto'
-  //   }
-  // }
+  }
 });
+
+function mask() {
+  var matrix = "+7 (___) ___ ____",
+      i = 0,
+      def = matrix.replace(/\D/g, ""),
+      val = this.value.replace(/\D/g, "");
+  if (def.length >= val.length) val = def;
+  this.value = matrix.replace(/./g, function(a) {
+      return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
+  });
+};
+
+var input = document.querySelectorAll("[type='tel']");
+input.forEach(function(item){
+  item.addEventListener("input", mask);
+})

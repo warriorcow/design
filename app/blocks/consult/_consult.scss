@@ -46,6 +46,7 @@
     color: #616E77;
     padding: 40px 0 40px 70px;
     box-sizing: border-box;
+    flex-grow: 1;
     @include breakpoint(lg) {
       width: 100%;
       padding: 40px 15px;
