@@ -1,9 +1,10 @@
 function thx(e) {
-  e.fadeIn().css('display', 'flex').siblings().css({
+  e.find('.thx').fadeIn().css('display', 'flex').siblings().css({
     'opacity': '0',
     'visibility': 'hidden'
   });
 }
+
 
 var swiper = new Swiper('.swiper-container.category', {
   spaceBetween: 10,
