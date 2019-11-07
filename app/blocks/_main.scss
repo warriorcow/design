@@ -11,12 +11,10 @@ html, body {
 p {
   margin: 0;
   font-size: 24px;
+  margin-bottom: 35px;
   @include breakpoint(md) {
     font-size: 16px;
     line-height: 1.5;
-  }
-  &:not(:last-of-type) {
-    padding-bottom: 35px;
   }
 }
 
@@ -105,5 +103,18 @@ input[type=tel] {
   border: 2px solid transparent;
   &.error {
     border-color: red
+  }
+}
+
+.incut {
+  border-left: 7px solid #a2ae8b;
+  border-bottom: 2px solid #a2ae8b;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 24px;
+  background: #f1f1f1;
+  font-style: italic;
+  @include breakpoint(md) {
+    font-size: 16px;
   }
 }

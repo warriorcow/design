@@ -1,5 +1,5 @@
 function thx(e) {
-  e.find('.form__thx').fadeIn().css('display', 'flex').siblings().css({
+  e.fadeIn().css('display', 'flex').siblings().css({
     'opacity': '0',
     'visibility': 'hidden'
   });

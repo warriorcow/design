@@ -77,8 +77,13 @@
     justify-content: space-between;
     margin: 0 -7.5px;
     > * {
-      flex: 1 1 47%;
+      // flex: 1 1 47%;
+      max-width: 47%;
+      width: 100%;
       margin: 0 7.5px 15px;
+      @include breakpoint(md) {
+        max-width: 100%;
+      }
     }
   }
   &__input {
@@ -134,7 +139,7 @@
         }
       }
       &__img {
-        width: 60vw;
+        width: 61vw;
         @include breakpoint(lg) {
           width: 100%;
         }

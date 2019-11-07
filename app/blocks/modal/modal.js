@@ -20,14 +20,16 @@ function showModal(e, thisName) {
       _this.find('.form__title').text(oldName);
       _this.find('.form__name').attr('value', '');
     }, 1000);
-  })
+  });
 
   // Клик вне модалки
-  $(document).mouseup(function (e){
+  $(document).mousedown(function (e){
     if (!_this.is(e.target)
         && _this.has(e.target).length === 0 && _this.hasClass('open')) {
       _this.fadeOut().parents('.modal').fadeOut();
       _this.removeClass('open');
+
+      
       setTimeout (function(){
         _this.find('.form__title').text(oldName);
         _this.find('.form__name').attr('value', '');
@@ -37,7 +39,8 @@ function showModal(e, thisName) {
 }
 
 $('.btn[data-js]').not('.btn[data-js=fancybox]').each(function(){
-  $(this).click(function(){
+  $(this).click(function(e){
+    e.preventDefault();
     showModal(this.getAttribute('data-js'), this.previousElementSibling.textContent)
   }) 
 })
