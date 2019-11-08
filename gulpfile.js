@@ -16,7 +16,8 @@ let jsLibs = [
   // 'node_modules/jquery/dist/jquery.js', // Jquery
   'node_modules/slick-slider/slick/slick.min.js', // Slick
   'node_modules/swiper/js/swiper.min.js', // Swiper
-  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js' // Fancybox
+  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', // Fancybox
+  'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js' // Mask
 ]
 
 let cssLibs = [

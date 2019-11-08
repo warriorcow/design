@@ -19,18 +19,4 @@ var swiper = new Swiper('.swiper-container.category', {
   }
 });
 
-function mask() {
-  var matrix = "+7 (___) ___ ____",
-      i = 0,
-      def = matrix.replace(/\D/g, ""),
-      val = this.value.replace(/\D/g, "");
-  if (def.length >= val.length) val = def;
-  this.value = matrix.replace(/./g, function(a) {
-      return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
-  });
-};
-
-var input = document.querySelectorAll("[type='tel']");
-input.forEach(function(item){
-  item.addEventListener("input", mask);
-})
+$("[type=tel]").mask("+7 (000) 000-00 00",{translation:{Z:{pattern:/[0-9]/,optional:!0}}});
