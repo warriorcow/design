@@ -2,20 +2,6 @@
   .slider {
     margin-bottom: 60px;
     max-width: 100%;
-    &_opacity {
-      .slider {
-        &__item {
-          opacity: 0.5;
-          transition: .5s;
-          &.slick-active {
-            opacity: 1;
-            .slider__title {
-              box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.238);
-            }
-          }
-        }
-      }
-    }
     .slick-center {
       transform: none;
     }
@@ -45,8 +31,10 @@
           top: 0;
           left: 0;
           cursor: pointer;
-          background-color: $locust;
+          background-color: #76477D;
+          border: 1px solid $locust;
           transition: .3s;
+          text-decoration: none;
           &:before {
             display: none;
           }
@@ -54,6 +42,56 @@
         &.slick-active button {
           transform: scale(0.65)
         }
+      }
+    }
+    .slick-track {
+      display: flex;
+      @include breakpoint(md) {
+        align-items: flex-start;
+      }
+    }
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      font-size: 0;
+      background-color: $locust;
+      z-index: 1;
+      &:before {
+        position: absolute;
+        content: '';
+        border-bottom: 2.5px solid $white;
+        border-right: 2.5px solid $white;
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+      }
+      &.slick-next {
+        right: -60px;
+        @include breakpoint(md) {
+          right: 0;
+        }
+        &:before {
+          transform: translate(-70%, -50%) rotate(-45deg);
+        }
+      }
+      &.slick-prev {
+        left: -60px;
+        @include breakpoint(md) {
+          left: 0;
+        }
+        &:before {
+          transform: translate(-30%, -50%) rotate(135deg);
+        }
+      }
+    }
+    .slick-current {
+      .slider__have {
+        opacity: 1;
+        z-index: 10;
       }
     }
     &__title {
@@ -67,7 +105,7 @@
       box-sizing: content-box;
     }
     &__item {
-      height: 100%;
+      height: auto;
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -83,14 +121,32 @@
         max-width: 870px;
         border: 1px solid #E5E5E5;
         border-radius: 5px;
-        padding: 40px 30px 20px;
+        padding: 40px 30px 150px;
         font-size: 16px;
-        @include breakpoint(lg) {
-          // max-width: 500px;
-        }
         audio {
           width: 100%;
-          height: 100%;
+          height: 36px;
+        }
+      }
+      &_personal {
+        .slider {
+          &__photo {
+            height: 260px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 5px;
+          }
+          &__name {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 17px;
+          }
+          &__position {
+            text-align: center;
+            font-size: 20px;
+          }
         }
       }
       .slider {
@@ -104,12 +160,6 @@
           width: 100%;
           height: 100%;
         }
-      }
-    }
-    .slick-current {
-      .slider__have {
-        opacity: 1;
-        z-index: 10;
       }
     }
     &__have {
@@ -164,15 +214,16 @@
     }
     &__media {
       border-top: 1px solid #E5E5E5;
-      margin-left: -30px;
-      margin-right: -30px;
-      margin-bottom: -20px;
-      margin-top: 20px;
       padding: 20px 30px;
-      height: 36px;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       box-sizing: content-box;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      box-sizing: border-box;
     }
     &__btn {
       padding: 9px 10px;
@@ -181,8 +232,36 @@
       text-align: center;
     }
     &__media-desc {
+      width: 100%;
       font-size: 14px;
-      margin-right: 25px;
+      margin-bottom: 20px;
+    }
+    &_opacity {
+      .slider {
+        &__item {
+          opacity: 0.5;
+          transition: .5s;
+          &.slick-active {
+            opacity: 1;
+            .slider__title {
+              box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.238);
+            }
+          }
+        }
+      }
+    }
+    &_big_gutter {
+      .slick-list {
+        margin: 0 -40px;
+      }
+      .slick-slide {
+        margin: 0 40px;
+      }
+    }
+    &_no-dots {
+      .slick-dots {
+        display: none!important;
+      }
     }
   }
 }

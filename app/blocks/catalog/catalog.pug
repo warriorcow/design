@@ -1,0 +1,4 @@
+mixin catalog(data)
+  .catalog
+    each item in data.items
+      a.catalog__item(href=item.full_img, style=`background-image:url(${item.resize_image})`, data-fancybox="gallery")

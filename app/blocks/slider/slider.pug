@@ -45,5 +45,13 @@ mixin slider(data)
                 add_Class: 'slider__btn',
                 btn_link: review.video,
                 btn_data: 'fancybox',
-                text: 'Смотреть'
+                text: 'Смотреть',
+                mods: review.btn_mods
               })
+    
+    if data.personals
+      each personal in data.personals
+        .slider__item.slider__item_personal
+          .slider__photo(style=`background-image:url(${personal.photo})`)
+          .slider__name=personal.name
+          .slider__position=personal.position

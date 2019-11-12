@@ -1,0 +1,65 @@
+.stride {
+  display: flex;
+  margin: 0 -10px;
+  flex-wrap: wrap;
+  padding-top: 110px;
+  & > * {
+    flex: 1 1 calc(25% - 20px);
+    @include breakpoint(md) {
+      flex: 1 1 calc(50% - 20px);
+    }
+    @include breakpoint(sm) {
+      flex: 1 1 calc(100% - 20px);
+    }
+  }
+  &__item {
+    border: 1px solid #D3CFCF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 0 10px;
+    padding: 25px;
+    position: relative;
+    background-color: $white;
+    @include breakpoint(md) {
+      margin-bottom: 20px;
+    }
+    &:not(:last-of-type):after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+      top: 50%;
+      right: -25px;
+      transform: translateY(-50%);
+      z-index: 1;
+      background: url(../img/arrow.svg) no-repeat center, #76477D;
+      @include breakpoint(sm) {
+        top: auto;
+        bottom: -25px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%) rotate(90deg);
+      }
+    }
+    &:nth-of-type(2):after {
+      @include breakpoint(md) {
+        top: auto;
+        right: auto;
+        bottom: -25px;
+        left: -25px;
+        transform: rotate(140deg);
+      }
+      @include breakpoint(sm) {
+        left: 50%;
+        transform: translateX(-50%) rotate(90deg);
+      }
+    }
+    p {
+      font-size: 14px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

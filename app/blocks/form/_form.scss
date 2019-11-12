@@ -28,7 +28,12 @@
         flex-basis: 45%
       }
     }
-    
+    .form__policy {
+      font-size: 9px;
+      flex: 1 1 35%;
+      padding: 0;
+      margin: 0;
+    }
   }
   &__title {
     margin-bottom: 20px;
@@ -37,18 +42,6 @@
     color: $white;
     max-width: 250px;
     width: 100%;
-  }
-  &__btn {
-    margin-top: 20px;
-    font-size: 16px;
-    padding: 16px 7px;
-    font-weight: 500;
-    position: relative;
-    text-align: center;
-    @include breakpoint(sm) {
-      width: 100%;
-      // max-width: 250px;
-    }
   }
   &__policy {
     font-size: 10px;
@@ -63,6 +56,17 @@
     @include breakpoint(sm) {
       flex-basis: 100%;
       margin-top: 20px;
+    }
+  }
+  &__btn {
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 16px 7px;
+    font-weight: 500;
+    position: relative;
+    text-align: center;
+    @include breakpoint(sm) {
+      width: 100%;
     }
   }
   &__input {
@@ -95,13 +99,16 @@
       font-size: 18px;
     }
   }
-  [type=file] {
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
+  &_big {
+    margin-top: 20px;
+    .form {
+      &__title {
+        font-size: 24px;
+        max-width: 100%;
+      }
+      &__box {
+        margin: 0;
+      }
+    }
   }
 }

@@ -1,16 +1,15 @@
 $('[data-js=fancybox]').fancybox();
 $('[data-js=slider]').slick({
-  centerMode: true,
   rows: false,
-  slidesToShow: 1,
-  variableWidth: true,
+  slidesToShow: 3,
   dots: true,
-  arrows: false,
+  arrows: true,
   responsive: [{
-    breakpoint: 640,
+    breakpoint: 960,
     settings: {
       variableWidth: false,
-      centerMode: false
+      slidesToShow: 1,
+      adaptiveHeight: true
     }
   }]
 });

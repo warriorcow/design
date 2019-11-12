@@ -1,0 +1,323 @@
+extends /app/templates/default
+
+block main
+  main
+    .container-new.container-new_pre-header(style="background-image: url(../img/banner-1.png)")
+      .row.row_sticking
+        +pre-header({
+          ad: true,
+          title_mods: ['small', 'white'],
+          form_mods: ['big'],
+          foto_insert: false,
+          btn_mods: ['violet'],
+          title: 'Пошив штор на заказ',
+          subtext: ' для оформления окон любой сложности '
+        })
+          +list({
+            mods: ['white'],
+            items: [{
+              text: 'Уникальные шторы на окна любой сложности в квартиры и частные дома.'
+            },{
+              text: 'Обеспечим текстильное наполнение интерьера в срок от 3 до 14 дней.'
+            },{
+              text: 'Авторский дизайн-проект, широкий выбор моделей и тканей, индивидуальный пошив под ключ.'
+            }]
+          })
+
+    .container-new.advantages.advantages_small
+      .row
+        .advantages__row
+          +title({
+            text: 'Четыре причины заказать именно у нас:',
+            tag: 'h2',
+            mods: ['h2']
+          })
+          .advantages__pic(style="background-image: url(../img/lp-advantages.png)")
+          .advantages__wrap
+            .advantages__item.advantages__item_violet 
+              strong Изготовим шторы с учетом всех особенностей 
+              | интерьера от 3 дней.
+            .advantages__item.advantages__item_violet 
+              strong Имеем собственный штат сотрудников: 
+              | дизайнеры, швеи, монтажники, водители.
+            .advantages__item.advantages__item_violet 
+              strong Оформляем любые нестандартные окна – 
+              | эркерные, арочные, трапециевидные, мансардные.
+            .advantages__item.advantages__item_violet 
+              strong Предлагаем широкий выбор тканей 
+              | из Испании, Италии, Германии, Индии, Турции.
+
+    .container-new
+      .row
+        +title({
+          text: 'Портфолио',
+          tag: 'h2',
+          mods: ['h2']
+        })
+
+        p Наша команда работает вместе уже более 10-ти лет и способна на создание даже самых сложных интерьеров. Несмотря на значительный опыт, мы никогда не перестаем учиться чему-то новому и быть в курсе новых трендов в дизайне штор. 
+
+        +portfolio({
+          items:[{
+            name: 'Шторы для гостинной в римском стиле',
+            img: '../img/portfolio-1.png'
+          },{
+            name: 'Шторы для гостинной в римском стиле',
+            img: '../img/portfolio-1.png'
+          },{
+            name: 'Шторы для гостинной в римском стиле',
+            img: '../img/portfolio-1.png'
+          },{
+            name: 'Шторы для гостинной в римском стиле',
+            img: '../img/portfolio-1.png'
+          },{
+            name: 'Шторы для гостинной в римском стиле',
+            img: '../img/portfolio-1.png'
+          },{
+            name: 'Шторы для гостинной в римском стиле',
+            img: '../img/portfolio-1.png'
+          }]
+        })
+
+    .container-new.abstract-img
+      .row
+        +title({
+          text: 'Четыре шага до ваших штор:',
+          tag: 'h2',
+          mods: ['h2']
+        })
+        +stride({
+          items: [{
+            contents:[
+              '<strong>Оставьте заявку</strong> на нашем сайте', 
+              '<strong>Позвоните нам</strong> по телефону', 
+              '<strong>Отправьте фото</strong> вашего интерьера.'
+            ]
+          },{
+            contents:[
+              '<strong>Дизайнер приедет</strong> к вам домой', 
+              '<strong>Бесплатно</strong> сделает все замеры', 
+              '<strong>Покажет образцы тканей</strong> и поможет в выборе оформления.'
+            ]
+          },{
+            contents:[
+              '<strong>Вы получите дизайн-проект</strong> ваших штор ', 
+              '<strong>Мы начнем их пошив</strong> из выбранных материалов.'
+            ]
+          },{
+            contents:[
+              '<strong>В назначенный день</strong> мастер приедет.', 
+              '<strong>Установит карниз.</strong>', 
+              '<strong>Повесит ваши шторы.</strong>'
+            ]
+          }]
+        })
+
+    .container-new.container-new_gray
+      .row
+        .insert-foto
+          .insert-foto__left
+            +title({
+              text: 'Как узнать стоимость проекта в 4 шага? ',
+              mods: ['h2'],
+              tag: 'h2'
+            })
+            +list({
+              addClass: 'insert-foto__list',
+              items: [{
+                text: 'Пришлите нам фотографию вашего интерьера.'
+              },{
+                text: 'Наш консультант позвонит вам для уточнения нюансов.'
+              },{
+                text: 'Напишите ваш номер телефона.'
+              },{
+                text: 'Узнайте примерную стоимость ваших штор.'
+              }]
+            })
+            form.insert-foto__form
+              input.insert-foto__input(type='tel', required, placeholder="Номер телефона")
+              label.btn.btn_file.insert-foto__input
+                span Прикрепить фото
+                input(type="file", multiple="multiple", accept="image/x-png,image/gif,image/jpeg")
+              +btn({
+                mods: ['violet'],
+                add_Class: 'insert-foto__btn',
+                type_btn: 'submit',
+                text: 'Отправить'
+              })
+
+          .insert-foto__right(style="background-image: url('../img/insert-foto-bg.png')")
+
+    .container-new
+      .row
+        +title({
+          text: 'Каталог тканей',
+          mods: ['h2'],
+          tag: 'h2'
+        })
+        +catalog({
+          items: [{
+            full_img: '../img/catalog-img-full-1.png',
+            resize_image: '../img/catalog-img-resize-1.png'
+          },{
+            full_img: '../img/catalog-img-full-2.png',
+            resize_image: '../img/catalog-img-resize-2.png'
+          },{
+            full_img: '../img/catalog-img-full-3.png',
+            resize_image: '../img/catalog-img-resize-3.png'
+          },{
+            full_img: '../img/catalog-img-full-4.png',
+            resize_image: '../img/catalog-img-resize-4.png'
+          },{
+            full_img: '../img/catalog-img-full-5.png',
+            resize_image: '../img/catalog-img-resize-5.png'
+          },{
+            full_img: '../img/catalog-img-full-6.png',
+            resize_image: '../img/catalog-img-resize-6.png'
+          },{
+            full_img: '../img/catalog-img-full-7.png',
+            resize_image: '../img/catalog-img-resize-7.png'
+          },{
+            full_img: '../img/catalog-img-full-8.png',
+            resize_image: '../img/catalog-img-resize-8.png'
+          }]
+        })
+  
+    .container-new
+      .row
+        +title({
+          text: 'Отзывы',
+          tag: 'h2',
+          mods: ['h2']
+        })
+
+        +slider({
+          
+          reviews: [{
+            audio: 'https://gamepedia.cursecdn.com/dota2_gamepedia/5/50/Music_default_laning_01.mp3',
+            pluses: [{
+              text: 'Мне очень понравилось в сервисном центре. Мастер очень быстро отремонтировал мой телефон. Всё было сделано очень качественно. Всё супер! Спасибо вам за работу!',
+            },{
+              text: 'Мне очень понравилось в сервисном центре. Мастер очень быстро отремонтировал мой телефон. Всё было сделано очень качественно. Всё супер! Спасибо вам за работу!'
+            },{
+              text: 'Мне очень понравилось в сервисном центре. Мастер очень быстро отремонтировал мой телефон. Всё было сделано очень качественно. Всё супер! Спасибо вам за работу!'
+            }],
+            minuses: [{
+              text: 'Мне очень не понравилось в сервисном центре. Мастер очень быстро отремонтировал мой телефон. Всё было сделано очень качественно. Всё супер! Спасибо вам за работу!'
+            },{
+              text: 'Мне очень не понравилось в сервисном центре. Мастер очень быстро отремонтировал мой телефон. Всё было сделано очень качественно. Всё супер! Спасибо вам за работу!'
+            }]
+          },
+          
+          {
+            audio: 'https://gamepedia.cursecdn.com/dota2_gamepedia/4/44/Music_default_battle_01.mp3',
+            pluses: [{
+              text: 'Мне очень понравилось в сервисном центре. Мастер очень быстро отремонтировал мой телефон. Всё было сделано очень качественно. Всё супер! Спасибо вам за работу!'
+            }],
+            minuses: [{
+              text: 'Мне очень не понравилось в сервисном центре. Мастер очень быстро отремонтировал мой телефон. Всё было сделано очень качественно. Всё супер! Спасибо вам за работу!'
+            },{
+              text: 'Мне очень не понравилось в сервисном центре. Мастер очень быстро отремонтировал мой телефон. Всё было сделано очень качественно. Всё супер! Спасибо вам за работу!'
+            }]
+          },
+          
+          {
+            btn_mods: ['violet'],
+            video: 'https://www.youtube.com/embed/W_bKpbiMz3A',
+            pluses: [{
+              text: 'Мне очень понравилось в сервисном центре. Мастер очень быстро отремонтировал мой телефон. Всё было сделано очень качественно. Всё супер! Спасибо вам за работу!'
+            }],
+            minuses: [{
+              text: 'Мне очень не понравилось в сервисном центре. Мастер очень быстро отремонтировал мой телефон. Всё было сделано очень качественно. Всё супер! Спасибо вам за работу!'
+            },{
+              text: 'Мне очень не понравилось в сервисном центре. Мастер очень быстро отремонтировал мой телефон. Всё было сделано очень качественно. Всё супер! Спасибо вам за работу!'
+            }]
+          },
+          
+          {
+            btn_mods: ['violet'],
+            video: 'https://www.youtube.com/embed/W_bKpbiMz3A',
+            pluses: [{
+              text: 'Мне очень понравилось в сервисном центре. Мастер очень быстро отремонтировал мой телефон. Всё было сделано очень качественно. Всё супер! Спасибо вам за работу!'
+            }],
+            minuses: [{
+              text: 'Мне очень не понравилось в сервисном центре. Мастер очень быстро отремонтировал мой телефон. Всё было сделано очень качественно. Всё супер! Спасибо вам за работу!'
+            },{
+              text: 'Мне очень не понравилось в сервисном центре. Мастер очень быстро отремонтировал мой телефон. Всё было сделано очень качественно. Всё супер! Спасибо вам за работу!'
+            }]
+          },
+          
+          {
+            btn_mods: ['violet'],
+            video: 'https://www.youtube.com/embed/W_bKpbiMz3A',
+            pluses: [{
+              text: 'Мне очень понравилось в сервисном центре. Мастер очень быстро отремонтировал мой телефон. Всё было сделано очень качественно. Всё супер! Спасибо вам за работу!'
+            }],
+            minuses: [{
+              text: 'Мне очень не понравилось в сервисном центре. Мастер очень быстро отремонтировал мой телефон. Всё было сделано очень качественно. Всё супер! Спасибо вам за работу!'
+            },{
+              text: 'Мне очень не понравилось в сервисном центре. Мастер очень быстро отремонтировал мой телефон. Всё было сделано очень качественно. Всё супер! Спасибо вам за работу!'
+            }]
+          }]
+        })
+
+    .container-new
+      .row
+        +title({
+          text: 'Наши дизайнеры',
+          tag: 'h2',
+          mods: ['h2']
+        })
+
+        +slider({
+          mods: ['big_gutter', 'no-dots'],
+          personals: [{
+            photo: '../img/Mariya.jpg',
+            name: 'Мария Кочетова',
+            position: 'Дизайнер штор'
+          },{
+            photo: '../img/Nina2.jpg',
+            name: 'Нина Рухая',
+            position: 'Ведущий дизайнер'
+          },{
+            photo: '../img/natalia_t.jpg',
+            name: 'Наталья Тернавская',
+            position: 'Дизайнер штор'
+          },{
+            photo: '../img/i_bazunova.jpg',
+            name: 'Ирина Базунова',
+            position: 'Дизайнер штор'
+          },{
+            photo: '../img/Olga.jpg',
+            name: 'Ольга Чобану',
+            position: 'Дизайнер штор'
+          },{
+            photo: '../img/evgenia_b.jpg',
+            name: 'Евгения Басаргина',
+            position: 'Дизайнер штор'
+          },{
+            photo: '../img/Silvana.jpg',
+            name: 'Сильвана Мацакова',
+            position: 'Дизайнер штор'
+          },{
+            photo: '../img/Olga_B.jpg',
+            name: 'Ольга Баринова',
+            position: 'Дизайнер штор'
+          }]
+        })
+
+    +callback({
+      title: 'Закажите экслюзивные шторы',
+      img: '../img/service-1.png',
+      btn_mods: ['violet'],
+      items: [{
+        type: "text",
+        placeholder: 'Ваше имя'
+      },{
+        type: "tel",
+        placeholder: 'Ваш номер'
+      },{
+        type: "email",
+        placeholder: 'Ваш e-maill'
+      }]
+    })

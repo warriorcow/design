@@ -1,0 +1,11 @@
+mixin portfolio(data)
+  .portfolio(class=addClass('portfolio', data.mods, data.addClass))
+    each item in data.items
+      .portfolio__item(style=`background-image: url(${item.img})`)
+        .portfolio__name=item.name
+    +btn({
+      btn_link: '#',
+      add_Class: 'portfolio__btn',
+      text: 'Смотреть все',
+      mods: ['violet']
+    })

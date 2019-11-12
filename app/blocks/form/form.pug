@@ -4,17 +4,31 @@ mixin form(data)
     input.form__name(type="hidden", value="")
     each item in data.items
       input(type=item.type, placeholder=item.placeholder).form__input
-    .form__box
-      label.btn.form__btn.btn_file
-        span Прикрепить фото
-        input(type="file", multiple="multiple", accept="image/x-png,image/gif,image/jpeg")
+    if data.foto_insert
+      .form__box
+        label.btn.form__btn.btn_file
+          span Прикрепить фото
+          input(type="file", multiple="multiple", accept="image/x-png,image/gif,image/jpeg")
+        +btn({
+          add_Class: 'form__btn',
+          type_btn: 'button',
+          text: data.btn_text
+        })
+      .form__policy Я согласен с условиями 
+        a(href="#", target="_blank") пользовательского соглашения
+
+    else
+      .form__box
+        .form__policy Я согласен с условиями 
+          a(href="#", target="_blank") пользовательского соглашения
+        +btn({
+          add_Class: 'form__btn',
+          type_btn: 'button',
+          mods: data.btn_mods,
+          text: data.btn_text
+        })
         
-      +btn({
-        add_Class: 'form__btn',
-        type_btn: 'button',
-        text: data.btn_text
-      })
-    .form__policy Я согласен с условиями 
-      a(href="#", target="_blank") пользовательского соглашения
       
-    .form__thx Спасибо за заявку! #[br]Мы скоро свяжемся с Вами. 
+    
+      
+    //- .form__thx Спасибо за заявку! #[br]Мы скоро свяжемся с Вами. 

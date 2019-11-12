@@ -1,0 +1,84 @@
+.insert-foto {
+  display: flex;
+
+  &__left {
+    padding: 30px 32% 50px 0;
+    width: 100%;
+    padding-right: 32%;
+    @include breakpoint(xl) {
+      padding-right: 0;
+    }
+  }
+  &__right {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    right: 0;
+    width: 32%;
+    max-width: 500px;
+    height: 100%;
+    @include breakpoint(xl) {
+      display: none;
+    }
+  }
+  &__list {
+    li {
+      display: inline-block;
+      width: 45%;
+      vertical-align: text-top;
+      margin-right: 15px;
+      @include breakpoint(lg) {
+        width: 100%;
+      }
+    }
+  }
+  &__form {
+    margin-top: 50px;
+    display: flex;
+    align-items: flex-start;
+    @include breakpoint(md) {
+      flex-wrap: wrap;
+      margin: 0 -20px;
+      justify-content: center;
+    }
+  }
+  &__input {
+    margin-right: 20px;
+    flex: 1 1 40%;
+    box-sizing: border-box;
+    padding: 15.5px 23px;
+    border-radius: 10px;
+    font-size: 16px;
+    @include breakpoint(md) {
+      margin: 0 20px 20px;
+      flex: 0 1 calc(70% - 40px);
+    }
+    @include breakpoint(sm) {
+      flex: 0 1 calc(100% - 40px);
+    }
+    &.btn_file {
+      text-align: center;
+      font-weight: normal;
+      background-color: #A87EAE;
+    }
+    &[type=tel] {
+      background-color: #E2E2E2;
+    }
+  }
+  &__btn {
+    width: 193px;
+    font-size: 16px;
+    padding: 15.5px 23px;
+    font-weight: normal;
+    line-height: 24px;
+    box-sizing: border-box;
+    @include breakpoint(md) {
+      margin: 0 20px 20px;
+      flex: 0 1 calc(70% - 40px);
+    }
+    @include breakpoint(sm) {
+      flex: 0 1 calc(100% - 40px);
+    }
+  }
+}

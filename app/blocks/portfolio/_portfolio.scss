@@ -1,0 +1,42 @@
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px -10px 0;
+  & > * {
+    flex: 1 1 calc(33.33% - 20px);
+    margin: 0 10px;
+    @include breakpoint(md) {
+      flex: 1 1 calc(50% - 20px);
+    }
+    @include breakpoint(sm) {
+      flex: 1 1 calc(100%);
+    }
+  }
+  &__item {
+    margin-bottom: 20px;
+    min-height: 250px;
+    position: relative;
+    border-radius: 5px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__name {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 14px;
+    color: #393939;
+    padding: 8px 17px;
+    border-radius: 5px 0 0 0;
+    max-width: 205px;
+    background: rgba(254, 252, 252, 0.69);
+  }
+  &__btn {
+    max-width: 150px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 20px auto 0;
+    font-weight: normal;
+  }
+}

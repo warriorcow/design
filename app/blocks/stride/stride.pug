@@ -1,0 +1,6 @@
+mixin stride(data)
+  .stride
+    each item in data.items
+      .stride__item
+        each content in item.contents
+          p!= content

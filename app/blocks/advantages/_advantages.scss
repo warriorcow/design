@@ -89,5 +89,45 @@
         margin-right: 20px;
       }
     }
+    &_violet {
+      &:before {
+        margin-bottom: 10px;
+        color: rgba(118, 71, 125, 0.5);
+      }
+    }
+  }
+  &_small {
+    .advantages {
+      &__pic {
+        right: 80%;
+        background-position: right center;
+      }
+      &__wrap {
+        padding-left: 27%;
+        @include breakpoint(md) {
+          padding-left: 0;
+        }
+      }
+      &__item {
+        flex: 1 1 25%;
+        @include breakpoint(md) {
+          flex: 1 1 100%;
+          text-align: center;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+      }
+      
+    }
+    .title {
+      margin-bottom: 50px;
+      padding-left: 27%;
+      @include breakpoint(md) {
+        padding-left: 0;
+      }
+    }
+    .row {
+      margin-bottom: 60px;
+    }
   }
 }
