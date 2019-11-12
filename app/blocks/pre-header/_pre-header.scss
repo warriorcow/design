@@ -9,7 +9,7 @@
   }
   &__wrap {
     flex: 1 1 50%;
-    &:last-child {
+    &:nth-of-type(2) {
       flex: 0 1 450px;
       margin-left: 80px;
       @include breakpoint(lg) {
@@ -34,23 +34,24 @@
     color: $white;
     z-index: 1;
     box-sizing: border-box;
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
       position: relative;
-      margin: 30px 0 -110px;
+      margin: 30px -15px -110px;
       padding: 15px;
+      width: 100vw;
     }
     p {
       margin-bottom: 0;
       text-transform: uppercase;
       font-size: 20px;
-      @include breakpoint(md) {
+      @include breakpoint(lg) {
         font-size: 14px;
         margin-bottom: 10px;
       }
     }
     span {
       font-size: 20px;
-      @include breakpoint(md) {
+      @include breakpoint(lg) {
         font-size: 14px;
       }
     }
