@@ -97,10 +97,7 @@
     }
   }
   &_small {
-    @include breakpoint(md) {
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
+    
     .advantages {
       &__pic {
         right: 80%;

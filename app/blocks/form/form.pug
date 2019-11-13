@@ -1,5 +1,6 @@
 mixin form(data)
   form.form(class=addClass('form', data.mods, data.addClass))
+    .form__thx.thx Спасибо за заявку! #[br]Мы скоро свяжемся с Вами.
     .form__title!=data.title
     input.form__name(type="hidden", value="")
     each item in data.items
@@ -26,9 +27,4 @@ mixin form(data)
           type_btn: 'button',
           mods: data.btn_mods,
           text: data.btn_text
-        })
-        
-      
-    
-      
-    //- .form__thx Спасибо за заявку! #[br]Мы скоро свяжемся с Вами. 
+        }) 

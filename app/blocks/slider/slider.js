@@ -1,6 +1,8 @@
 $('[data-js=fancybox]').fancybox();
 $('[data-js=slider]').slick({
   rows: false,
+  swipeToSlide: true,
+  slidesToScroll: 1,
   slidesToShow: 3,
   dots: true,
   arrows: true,

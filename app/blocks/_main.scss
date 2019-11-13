@@ -143,3 +143,10 @@ input[type=tel] {
     background-size: 250%;
   }
 }
+
+.breadcrumbs {
+  background-color: $white;
+  a {
+    color: $black;
+  }
+}
