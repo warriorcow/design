@@ -27,6 +27,8 @@ mixin slider(data)
             .slider__rating
               each minus in review.minuses
                 .slider__minus!=minus.text
+          if review.text
+            .slider__rating!=review.text
 
           if review.audio
             .slider__media

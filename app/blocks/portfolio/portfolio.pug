@@ -4,7 +4,7 @@ mixin portfolio(data)
       a.portfolio__item(href=item.full_img, style=`background-image:url(${item.resize_image})`, data-fancybox="gallery-catalog")
         .portfolio__name=item.name
     +btn({
-      btn_link: '#',
+      btn_link: '/gallery/',
       add_Class: 'portfolio__btn',
       text: 'Смотреть все',
       mods: ['violet']

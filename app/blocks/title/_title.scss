@@ -15,6 +15,9 @@
       font-size: 40px;
       font-weight: 700;
       text-transform: uppercase;
+      @include breakpoint(sm) {
+        font-size: 32px;
+      }
       span {
         font-size: 20px;
         display: block;
@@ -37,6 +40,9 @@
       font-size: 40px;
       font-weight: 700;
       color: $nevada;
+      @include breakpoint(sm) {
+        font-size: 30px;
+      }
     }
     // &_h3 {
       

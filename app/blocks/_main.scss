@@ -107,6 +107,10 @@ input[type=text],
 input[type=email],
 input[type=tel] {
   border: 2px solid transparent;
+  transition: .3s;
+  &:focus {
+    border-bottom: 2px solid $locust;
+  }
   &.error {
     border-color: red
   }

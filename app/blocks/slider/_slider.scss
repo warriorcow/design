@@ -19,7 +19,6 @@
         height: 15px;
         overflow: hidden;
         position: relative;
-
         button {
           width: 100%;
           height: 100%;
@@ -31,8 +30,7 @@
           top: 0;
           left: 0;
           cursor: pointer;
-          background-color: #76477D;
-          border: 1px solid $locust;
+          background-color: $locust;
           transition: .3s;
           text-decoration: none;
           &:before {
@@ -51,6 +49,8 @@
       }
     }
     .slick-arrow {
+      visibility: hidden;
+      opacity: 0;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
@@ -258,9 +258,28 @@
         margin: 0 40px;
       }
     }
-    &_no-dots {
-      .slick-dots {
-        display: none!important;
+    
+    &_dots {
+      &_hidden {
+        .slick-dots {
+          display: none!important;
+        }
+      }
+      &_violet {
+        .slick-dots {
+          li button {
+            background-color: #76477D;
+            border: 1px solid $locust;
+          }
+        }
+      }
+    }
+    &_arrows {
+      &_visible {
+        .slick-arrow {
+          visibility: visible;
+          opacity: 1;
+        }
       }
     }
   }

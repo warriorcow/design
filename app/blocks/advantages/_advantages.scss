@@ -97,8 +97,10 @@
     }
   }
   &_small {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    @include breakpoint(md) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
     .advantages {
       &__pic {
         right: 80%;
@@ -116,6 +118,7 @@
           flex: 1 1 100%;
           text-align: center;
           flex-direction: column;
+          font-size: 18px;
         }
         &:last-of-type {
           padding-bottom: 20px;
