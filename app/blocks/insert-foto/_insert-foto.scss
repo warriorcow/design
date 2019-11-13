@@ -1,6 +1,16 @@
 .insert-foto {
   display: flex;
-
+  &__thx {
+    width: 100%;
+    position: absolute;
+    align-items: center;
+    height: 100%;
+    font-size: 26px;
+    display: none;
+    @include breakpoint(xl) {
+      font-size: 18px;
+    }
+  }
   &__left {
     padding: 30px 32% 50px 0;
     width: 100%;
@@ -37,6 +47,7 @@
     margin-top: 50px;
     display: flex;
     align-items: flex-start;
+    position: relative;
     @include breakpoint(md) {
       flex-wrap: wrap;
       margin: 0 -20px;
