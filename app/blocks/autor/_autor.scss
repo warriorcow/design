@@ -1,0 +1,30 @@
+.autor {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px dashed $locust;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 15px;
+  display: flex;
+  background-color: #f7f7f7;
+  &__text {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: 10px;
+    justify-content: center;
+    text-align: right;
+  }
+  &__name {
+    margin-bottom: 25px;
+  }
+  &__photo {
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 60px;
+  }
+}

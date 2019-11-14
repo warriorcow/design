@@ -1,0 +1,8 @@
+mixin autor(data)
+  .autor
+    .autor__text
+      .autor__name
+        |Автор: 
+        =data.name
+      .autor__rank=data.rank
+    .autor__photo(style=`background-image:url(${data.photo});`)

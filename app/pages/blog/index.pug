@@ -3,4 +3,8 @@ extends /app/templates/default
 block main
   .container-new
     .row
-      p 123
+      +autor({
+        name: 'Евгения Басаргина',
+        rank: 'Дизайнер',
+        photo: '../img/Olga.jpg'
+      })
