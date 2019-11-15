@@ -1,4 +1,12 @@
-$('[data-js=fancybox]').fancybox();
+fancySlider = document.querySelectorAll('.slider_fancybox');
+fancySlider.forEach(function(el, i){
+  let itemFancy = el.querySelectorAll('a');
+  for ( let j = 0; j < itemFancy.length; j++ ) {
+    itemFancy[j].setAttribute('data-fancybox', i);
+  }
+});
+
+
 $('[data-js=slider]').slick({
   rows: false,
   swipeToSlide: true,
@@ -6,6 +14,7 @@ $('[data-js=slider]').slick({
   slidesToShow: 3,
   dots: true,
   arrows: true,
+  infinite: false,
   responsive: [{
     breakpoint: 960,
     settings: {
@@ -14,6 +23,8 @@ $('[data-js=slider]').slick({
     }
   }]
 });
+
+
 
 $('.audio').each(function(){
   this.addEventListener('loadedmetadata', function() {

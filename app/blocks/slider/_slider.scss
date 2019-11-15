@@ -47,17 +47,18 @@
     }
     .slick-track {
       display: flex;
-      margin: 0 -15px;
       @include breakpoint(md) {
         align-items: flex-start;
       }
+    }
+    .slick-list {
+      margin: 0 -15px;
     }
     .slick-arrow {
       visibility: hidden;
       opacity: 0;
       position: absolute;
       top: 8rem;
-      // transform: translateY(-50%);
       width: 40px;
       height: 40px;
       font-size: 0;
@@ -92,12 +93,12 @@
         }
       }
     }
-    .slick-current {
-      .slider__have {
-        opacity: 1;
-        z-index: 10;
-      }
-    }
+    // .slick-current {
+    //   .slider__have {
+    //     opacity: 1;
+    //     z-index: 10;
+    //   }
+    // }
     &__title {
       font-size: 23px;
       color: #393939;
@@ -167,7 +168,7 @@
       }
     }
     &__have {
-      opacity: 0;
+      // opacity: 0;
       transition: .4s;
       max-width: 200px;
       width: 100%;
@@ -282,8 +283,12 @@
     &_arrows {
       &_visible {
         .slick-arrow {
-          visibility: visible;
-          opacity: 1;
+            visibility: visible;
+            opacity: 1;
+          @include breakpoint (md) {
+            visibility: hidden;
+            opacity: 0;
+          }
         }
       }
     }

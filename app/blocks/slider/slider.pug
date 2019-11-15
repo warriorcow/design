@@ -4,7 +4,7 @@ mixin slider(data)
       each item in data.items
         .slider__item.slider__item_image(style="background-image: url("+item.img+")")
           if item.link
-            a.slider__link(href=item.link)
+            a.slider__link(href=item.img, data-fancybox="gallery")
           if item.title
             .slider__title!=item.title
           +btn({

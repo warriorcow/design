@@ -1,10 +1,10 @@
 .advantages {
   background-color: #F9F9F9;
+  + .advantages {
+    margin-top: -60px;
+  }
   &_gray {
     background-color: #F0F0F0;
-  }
-  .row {
-    margin-bottom: 0;
   }
   &__row {
     position: relative;
@@ -15,7 +15,6 @@
       padding-top: 15px;
     }
     &_reverse {
-      margin-bottom: 60px;
       .advantages {
         &__wrap {  
           padding-left: 0;

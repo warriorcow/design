@@ -27,7 +27,7 @@
   }
 }
 
-main {
+.acticle_content, main {
   ul.disc {
     margin: 35px 0;
     li {
@@ -36,6 +36,7 @@ main {
       list-style-type: none;
       padding-left: 30px;
       margin-bottom: 10px;
+      line-height: 1.5;
     }
   }
 }
