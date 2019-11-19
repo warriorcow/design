@@ -2,6 +2,7 @@ var searchBtn = $('[data-js=searchOpen]');
 var searchForm = $('[data-js=searchOpen]').parent();
 
 searchBtn.click(function(){
+  console.log('search')
   searchForm.toggleClass('active');
 });
 

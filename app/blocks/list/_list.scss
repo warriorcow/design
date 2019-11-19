@@ -23,7 +23,7 @@
       transform: rotate(45deg);
       border: 2px solid $battleship_gray;
       box-sizing: border-box;
-    }
+    }  
   }
 }
 
@@ -37,6 +37,16 @@
       padding-left: 30px;
       margin-bottom: 10px;
       line-height: 1.5;
+    }
+  }
+  ol.disc {
+    li {
+      list-style: decimal;
+      font-size: 16px;
+      margin-left: 20px;
+      &:before {
+        display: none;
+      }
     }
   }
 }
