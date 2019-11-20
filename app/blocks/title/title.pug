@@ -3,7 +3,11 @@ mixin title(data)
     .link-title
       #{data.tag}.title(class=addClass('title', data.mods, data.addClass) id=data.id)
         != data.text
-      a(href=data.link_more).title__link-more Посмотреть все работы
+      +btn({
+        btn_link: data.link_more,
+        text: 'Посмотреть все работы',
+        add_Class: 'title__link-more'
+      })
   else
     #{data.tag}.title(class=addClass('title', data.mods, data.addClass) id=data.id)
       if data.link

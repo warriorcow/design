@@ -51,11 +51,8 @@
       position: absolute;
       right: 0;
       bottom: 0;
-      color: $locust;
       @include breakpoint(md) {
-        // position: static;
         display: none;
-        // margin-top: 10px;
       }
     }
   }
