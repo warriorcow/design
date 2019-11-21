@@ -1,4 +1,7 @@
 mixin catalog(data)
-  .catalog
+  .catalog.slider.slider_arrows_visible.slider_dots_violet(data-js='slider_catalog')
     each item in data.items
-      a.catalog__item(href=item.full_img, style=`background-image:url(${item.resize_image})`, data-fancybox="gallery")
+      .catalog__wrapper
+        each img in item.imgs
+          a.catalog__item(href=img.full_img, style=`background-image:url(${img.resize_image})`, data-fancybox="gallery")
+        
