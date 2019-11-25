@@ -1,0 +1,33 @@
+.footer {
+  .row {
+    margin-bottom: 0;
+  }
+  &__wrapper {
+    padding-top: 35px;
+    padding-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+  }
+  &__column {
+    color: #A7A7A7;
+    font-size: 15px;
+    width: 100%;
+    max-width: 150px;
+  }
+  &__category {
+    &-name {
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+    &-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      li {
+        &:not(:last-child) {
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+}
