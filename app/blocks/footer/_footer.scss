@@ -2,32 +2,136 @@
   .row {
     margin-bottom: 0;
   }
+  &__logo {
+    display: block;
+    max-width: 105px;
+    @include breakpoint(lg) {
+      margin: auto;
+    }
+  }
+  &__btn {
+    width: 100%;
+    max-width: 230px;
+    margin: 30px 0;
+  }
   &__wrapper {
     padding-top: 35px;
     padding-bottom: 25px;
     display: flex;
     align-items: flex-start;
+    @include breakpoint(lg) {
+      flex-wrap: wrap;
+      margin: 0 -10px;
+    }
   }
   &__column {
     color: #A7A7A7;
     font-size: 15px;
     width: 100%;
     max-width: 150px;
+    &:not(:first-of-type) {
+      margin-right: 35px;
+      @include breakpoint(lg) {
+        margin-right: 15px;
+        flex: 1 1 calc(25% - 20px);
+        max-width: 100%;
+        margin: 10px;
+      }
+      @include breakpoint(md) {
+        flex: 1 1 calc(50% - 20px);
+      }
+      @include breakpoint(sm) {
+        flex: 1 1 calc(100% - 20px);
+      }
+    }
+    &:first-of-type {
+      min-width: 105px;
+      max-width: 105px;
+      margin-right: 30px;
+      @include breakpoint(lg) {
+        max-width: 100%;
+        flex: 1 1 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+    &:last-of-type {
+      min-width: 170px;
+      margin-right: 0;
+      margin-left: auto;
+      text-align: right;
+      @include breakpoint(lg) {
+        max-width: 100%;
+        flex: 1 1 100%;
+        margin-right: 0;
+        text-align: center;
+        max-width: 500px;
+        margin: 20px auto 0;
+      }
+      span {
+        display: block;
+      }
+      & > a {
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
   }
   &__category {
     &-name {
       margin-bottom: 10px;
       font-weight: 800;
+      display: block;
     }
     &-list {
       list-style: none;
       padding-left: 0;
       margin: 0;
+      & + .footer__category-name {
+        margin-top: 20px;
+      }
       li {
         &:not(:last-child) {
           padding-bottom: 10px;
         }
       }
+    }
+  }
+  &__bottom {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #989898;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    @include breakpoint(sm) {
+      flex-direction: column;
+    }
+    & > * {
+      @include breakpoint(sm) {
+        margin-top: 10px;
+      }
+    }
+  }
+  &__policy {
+
+  }
+  &__copyright {
+
+  }
+  &__developer {
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 67px;
+      height: 18px;
+      margin-left: 8px;
+    }
+    a {
+      // width: 67px;
+      height: 18px;
     }
   }
 }

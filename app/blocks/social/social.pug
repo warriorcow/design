@@ -1,0 +1,6 @@
+mixin social(data)
+  .social
+    .social__title Мы в соцсетях:
+    each val in data.name
+      a(href="#").social__item
+        +icon({icon: val})

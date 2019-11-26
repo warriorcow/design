@@ -3,27 +3,116 @@ footer.footer
     .row
       .footer__wrapper
         .footer__column
-          img.footer__logo(src="img/logo.png")
+          a(href="/").footer__logo
+            img(src="img/logo.png")
 
-        .footer__column
+        .footer__column  
           .footer__category
-            .footer__category-name Шторы
+            a(href="#").footer__category-name Шторы
             ul.footer__category-list
-              li Классические шторы
-              li Современные шторы
-              li Римские шторы
-              li Японские шторы
-              li Австрийские шторы
-              li Французские шторы
-              li Пошив подушек на заказ
-              li Пошив покрывал на заказ
-
-
+              li 
+                a(href="#") Классические шторы
+              li 
+                a(href="#") Современные шторы
+              li 
+                a(href="#") Римские шторы
+              li 
+                a(href="#") Японские шторы
+              li 
+                a(href="#") Австрийские шторы
+              li 
+                a(href="#") Французские шторы
+              li 
+                a(href="#") Пошив подушек на заказ
+              li 
+                a(href="#") Пошив покрывал на заказ
+          
+        .footer__column  
+          .footer__category
+            a(href="#").footer__category-name Шторы
+            ul.footer__category-list
+              li 
+                a(href="#") Классические шторы
+              li 
+                a(href="#") Современные шторы
+              li 
+                a(href="#") Римские шторы
+              li 
+                a(href="#") Японские шторы
+              li 
+                a(href="#") Австрийские шторы
+              li 
+                a(href="#") Французские шторы
+              li 
+                a(href="#") Пошив подушек на заказ
+              li 
+                a(href="#") Пошив покрывал на заказ
+          
+        .footer__column  
+          .footer__category
+            a(href="#").footer__category-name Шторы
+            ul.footer__category-list
+              li 
+                a(href="#") Классические шторы
+              li 
+                a(href="#") Современные шторы
+              li 
+                a(href="#") Римские шторы
+              li 
+                a(href="#") Японские шторы
+              li 
+                a(href="#") Австрийские шторы
+              li 
+                a(href="#") Французские шторы
+              li 
+                a(href="#") Пошив подушек на заказ
+              li 
+                a(href="#") Пошив покрывал на заказ
+          
+        .footer__column  
+          .footer__category
+            a(href="#").footer__category-name Шторы
+            ul.footer__category-list
+              li 
+                a(href="#") Классические шторы
+              li 
+                a(href="#") Современные шторы
+              li 
+                a(href="#") Римские шторы
+              li 
+                a(href="#") Японские Шторы
+            a(href="#").footer__category-name Шторы
+            ul.footer__category-list
+              li 
+                a(href="#") Классические шторы
+              li 
+                a(href="#") Современные шторы
+              li 
+                a(href="#") Римские шторы
+              li 
+                a(href="#") Японские шторы
 
         .footer__column
-
-        .footer__column
-
-        .footer__column
-
-        .footer__column
+          a(href="mailto:info@ok.design") info@ok.design
+          a(href="tel:+74994909885") 
+            strong +7 (499) 490-98-85
+          span г.Одинцово, Можайское шоссе, д.100А, п.5
+          +btn({
+            text: 'Заказать звонок',
+            btn_data: 'consultate',
+            add_Class: 'footer__btn'
+          })
+          +social({
+            name: ['vk', 'fb', 'ok', 'inst']
+          })
+       
+  .container-new.container-new_dark
+    .row
+      .footer__bottom    
+        .footer__policy
+          a(href="#") Политика конфиденциальности
+        .footer__copyright OK.DESIGN © 2019
+        .footer__developer
+          span Создание сайта:
+          a(href="https://texterra.ru/", target="_blank")
+            +icon({icon: 'texterra'})

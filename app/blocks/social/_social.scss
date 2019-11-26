@@ -1,0 +1,27 @@
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  @include breakpoint(lg) {
+    justify-content: center;
+  }
+  &__title {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  &__item {
+    &:not(:first-of-type) {
+      margin-left: 7%;
+      @include breakpoint(lg) {
+        margin: 0;
+      }
+    }
+    @include breakpoint(lg) {
+      padding: 0 10px;
+    }
+  }
+  &__item, svg {
+    width: 28px;
+    height: 28px;
+  }
+}
