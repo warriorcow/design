@@ -4,6 +4,9 @@
   &_white {
     color: $white;
   }
+  &_dark {
+    color: #393939;
+  }
   &__item, li {
     padding-left: 20px;
     list-style: none;

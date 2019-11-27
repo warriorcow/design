@@ -11,6 +11,7 @@ mixin form(data)
           span Прикрепить фото
           input(type="file", multiple="multiple", accept="image/x-png,image/gif,image/jpeg")
         +btn({
+          mods: data.btn_mods,
           add_Class: 'form__btn',
           type_btn: 'button',
           text: data.btn_text

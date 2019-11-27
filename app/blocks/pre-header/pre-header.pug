@@ -12,16 +12,16 @@ mixin pre-header(data)
     
     .pre-header__wrap
       +form({
-          mods: data.form_mods,
-          foto_insert: data.foto_insert,
-          btn_mods: data.btn_mods,
-          title: 'Получите бесплатную консультацию у дизайнеров ',
-          btn_text: 'Получить консультацию',
-          items: [{
-            type: 'tel',
-            placeholder: 'Ваш телефон'
-          }]
-        })
+        addClass: 'pre-header__form',
+        mods: data.form_mods,
+        foto_insert: data.foto_insert,
+        title: 'Получите бесплатную консультацию у дизайнеров ',
+        btn_text: 'Получить консультацию',
+        items: [{
+          type: 'tel',
+          placeholder: 'Ваш телефон'
+        }]
+      })
     if data.ad
       .pre-header__ad
         p БЕСПЛАТНЫЙ ВЫЕЗД ДИЗАЙНЕРА ПО МОСКВЕ И МОСКОВСКОЙ ОБЛАСТИ

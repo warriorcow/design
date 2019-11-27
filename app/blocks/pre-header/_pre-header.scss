@@ -72,4 +72,35 @@
       }
     }
   }
+  &__form {
+    background: rgba(255, 255, 255, 0.85);
+    .form {
+      &__title {
+        color: #393939;
+      }
+      &__input {
+        background: #EFEFEF;
+        border: 2px solid #CACACA;
+        color: #575757;
+        &::placeholder {
+          color: inherit;
+        }
+      }
+      &__btn {
+        background-color: #76477d;
+        border-radius: 0 10px 10px 0;
+        font-size: 15px;
+        @include breakpoint(sm) {
+          border-radius: 10px;
+        }
+        &.btn_file {
+          background: rgba(118, 71, 125, 0.47);
+          border-radius: 10px 0 0 10px;
+          @include breakpoint(sm) {
+            border-radius: 10px;
+          }
+        }
+      } 
+    }
+  }
 }

@@ -2,15 +2,15 @@ extends /app/templates/default
 
 block main
   main
-    .container-new.container-new_pre-header(style="background-image: url(./img/banner-1.png)")
+    .container-new.container-new_pre-header(style="background-image: url(./img/preheader.png)")
       .row
         +pre-header({
           title: 'Шторы под ключ высокого качества в срок от 3 дней',
-          title_mods: ['h1', 'white'],
+          title_mods: ['h1', 'dark'],
           foto_insert: true,
         })
           +list({
-            mods: ['white'],
+            mods: ['dark'],
             items: [{
               text: 'Уникальные шторы под любой интерьер: офисы, квартиры, коттеджи.'
             },{

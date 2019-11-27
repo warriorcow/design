@@ -80,6 +80,25 @@ a {
   &_dark {
     background-color: #393939;
   }
+  &_pre-header {
+    z-index: 1;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+    }
+    &:before {
+      background: linear-gradient(64.73deg, rgba(255, 255, 255, 0.59) 12.31%, rgba(255, 255, 255, 0) 106.33%);
+    }
+    &:after {
+      background: linear-gradient(51.28deg, rgba(255, 255, 255, 0.59) -15.62%, rgba(255, 255, 255, 0) 56.07%);
+    }
+  }
 }
 
 .row {
