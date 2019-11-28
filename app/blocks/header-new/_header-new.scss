@@ -7,7 +7,7 @@
     z-index: 1;
   }
   @include breakpoint(lg) {
-    padding-right: 40px;
+    padding-right: 0px;
   }
   &__top {
     display: flex;
@@ -30,6 +30,7 @@
     > * {
       padding-left: 16px;
       padding-right: 16px;
+      font-size: 15px;
       @include breakpoint(md) {
         padding-left: 10px;
         padding-right: 10px;
@@ -38,6 +39,7 @@
   }
   &__logo {
     margin-right: 60px;
+    line-height: 0;
     img {
       width: 100%;
     }
@@ -45,7 +47,7 @@
       margin-right: 20px;
     }
     @include breakpoint(md) {
-      max-width: 69px;
+      max-width: 105px;
       margin-right: 0;
     }
   }

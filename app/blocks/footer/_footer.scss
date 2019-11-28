@@ -1,7 +1,11 @@
 .footer {
   padding: 0;
   text-align: left;
+  margin-top: 0px;
   .row {
+    margin-bottom: 0;
+  }
+  .container-new {
     margin-bottom: 0;
   }
   &__callback {

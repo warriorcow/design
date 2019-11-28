@@ -20,6 +20,7 @@
   }
   &_file {
     background-color: #a2ae8b66;
+    display: none;
     [type=file] {
       visibility: hidden;
       position: absolute;

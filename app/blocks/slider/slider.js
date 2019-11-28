@@ -1,3 +1,5 @@
+
+$.fancybox.defaults.backFocus = false;
 fancySlider = document.querySelectorAll('.slider_fancybox');
 fancySlider.forEach(function(el, i){
   let itemFancy = el.querySelectorAll('a');
