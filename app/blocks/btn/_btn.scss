@@ -37,8 +37,15 @@
     background-color: #76477D;
     box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.27);
   }
-  // &_center {
-  //   display: block;
-  //   margin: 0 auto;
-  // }
+  &_more {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 270px;
+    margin: 0 auto;
+    display: block;
+    background: none;
+    color: #76477D;
+    font-size: 24px;
+    text-decoration: underline;
+  }
 }
