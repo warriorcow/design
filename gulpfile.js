@@ -41,7 +41,7 @@ function style() {
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-    .pipe(csso())
+    // .pipe(csso())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.stream())
