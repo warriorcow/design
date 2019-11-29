@@ -1,0 +1,133 @@
+
+$sm: 20px;
+$md: 40px;
+$lg: 70px;
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  > * {
+    flex: 0 1 50%;
+  }
+  &_2 > * {
+    flex: 0 1 50%;
+  }
+  &_3 > *  {
+    flex: 0 1 33.33%;
+  }
+  &_4 > *  {
+    flex: 0 1 25%;
+  }
+  &_5 > *  {
+    flex: 0 1 20%;
+  }
+
+  &_offset {
+    &_sm {
+      margin: 0 #{-$sm/2};
+      &.grid {
+        & > * {
+          flex: 1 1 100%;
+          width: 100%;
+          margin: $sm/2;
+          @include breakpoint(lg) {
+            flex: 0 1 calc(50% - #{$sm});
+            max-width: calc(50% - #{$sm});
+          }
+        }
+        &_2 > * {
+            flex: 0 1 calc(50% - #{$sm});
+            max-width: calc(50% - #{$sm});
+            @include breakpoint(md) {
+              flex: 0 1 calc(100% - #{$sm});
+              max-width: calc(100% - #{$sm});
+            }
+        }
+        &_3 > *  {
+            flex: 0 1 calc(33.33% - #{$sm});
+            max-width: calc(33.33% - #{$sm});
+            @include breakpoint(lg) {
+              flex: 0 1 calc(50% - #{$sm});
+              max-width: calc(50% - #{$sm});
+            }
+            @include breakpoint(sm) {
+              flex: 0 1 calc(100% - #{$sm});
+              max-width: calc(100% - #{$sm});
+            }
+        }
+        &_4 > *  {
+          flex: 0 1 calc(25% - #{$sm});
+          max-width: calc(25% - #{$sm});
+        }
+        &_5 > *  {
+          flex: 0 1 calc(20% - #{$sm});
+          max-width: calc(20% - #{$sm});
+        }
+      }
+    }
+    &_md {
+      margin: 0 #{-$md/2};
+      &.grid {
+        & > * {
+          flex: 1 1 100%;
+          width: 100%;
+          margin: $md/2;
+          @include breakpoint(md) {
+            flex: 0 1 calc(50% - #{$md});
+            max-width: calc(50% - #{$md});
+          }
+        }
+        &_2 > * {
+          flex: 0 1 calc(50% - #{$md});
+            max-width: calc(50% - #{$md});
+        }
+        &_3 > *  {
+          flex: 0 1 calc(33.33% - #{$md});
+          max-width: calc(33.33% - #{$md});
+        }
+        &_4 > *  {
+          flex: 0 1 calc(25% - #{$md});
+          max-width: calc(25% - #{$md});
+        }
+        &_5 > *  {
+          flex: 0 1 calc(20% - #{$md});
+          max-width: calc(20% - #{$md});
+
+        }
+      }
+    }
+    &_lg {
+      margin: -20px #{-$lg/2};
+      @include breakpoint(md) {
+        margin: 0px #{-$lg/2};
+      }
+      &.grid {
+        & > * {
+          flex: 1 1 100%;
+          width: 100%;
+          margin: 20px $lg/2;
+          @include breakpoint(md) {
+            flex: 0 1 calc(50% - #{$lg});
+            max-width: calc(50% - #{$lg});
+          }
+        }
+        &_2 > * {
+          flex: 0 1 calc(50% - #{$lg});
+          max-width: calc(50% - #{$lg});
+        }
+        &_3 > *  {
+          flex: 0 1 calc(33.33% - #{$lg});
+          max-width: calc(33.33% - #{$lg});
+        }
+        &_4 > *  {
+          flex: 0 1 calc(25% - #{$lg});
+          max-width: calc(25% - #{$lg});
+        }
+        &_5 > *  {
+          flex: 0 1 calc(20% - #{$lg});
+          max-width: calc(20% - #{$lg});
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+mixin tags(data)
+  .tags
+    a(href="#").tags__item.active Все работы
+    each item in data.items
+     a(href="#").tags__item!=item
+        

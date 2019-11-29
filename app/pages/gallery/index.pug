@@ -1,0 +1,27 @@
+extends /app/templates/default
+
+block main
+  main
+    .container-new
+      .row
+        +breadcrumbs({
+          items: ['Главная', 'Галерея работ' ]
+        })
+      .row
+        +title({
+          tag: 'h1',
+          mods: ['h1'],
+          text: 'Наши работы'
+        })
+      .row
+        +tags({
+          items: ['Дома', 'Квартиры' , 'Офисы', 'Спальни', 'Офисы', 'Офисы', 'Веревочные']
+        })
+    .container-new
+      .row
+        +grid({columns: '3', offset: 'sm'})
+          include /app/blocks/case/case
+          include /app/blocks/case/case
+          include /app/blocks/case/case
+          include /app/blocks/case/case
+      
