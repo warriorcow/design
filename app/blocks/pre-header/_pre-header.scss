@@ -76,7 +76,7 @@
     background: rgba(255, 255, 255, 0.85);
     .form {
       &__title {
-        color: #393939;
+        color: $main;
       }
       &__input {
         background: #EFEFEF;

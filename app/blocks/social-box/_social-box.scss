@@ -1,0 +1,20 @@
+.social-box {
+  position: absolute;
+  display: flex;
+  right: 10px;
+  top: 30px;
+  &__item {
+    width: 28px;
+    height: 28px;
+    margin: 0 10px;
+    border-radius: 100%;
+    background-color: $locust;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      width: 15px;
+      height: 28px;
+    }
+  }
+}

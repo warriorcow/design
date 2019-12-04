@@ -93,7 +93,7 @@
     box-sizing: border-box;
     font-size: 16px;
     &::placeholder {
-      color: #393939;
+      color: $main;
     }
   }
   &__time {

@@ -12,6 +12,10 @@ html(lang="ru")
       include /app/blocks/title/title
       include /app/blocks/btn/btn
       include /app/blocks/social/social
+      include /app/blocks/rating/rating
+      include /app/blocks/breadcrumbs/breadcrumbs
+      include /app/blocks/tags/tags
+      include /app/blocks/grid/grid
       include /app/blocks/list/list
       include /app/blocks/form/form
       include /app/blocks/icon/icon
@@ -32,6 +36,7 @@ html(lang="ru")
 
     block header
       header
+        include /app/blocks/social-panel/social-panel
         .container-new.container-new_header
           .row
             +header-new({
