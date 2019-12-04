@@ -24,9 +24,8 @@
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    right: 0;
-    width: 32%;
-    max-width: 500px;
+    left: 70%;
+    width: 46vw;
     height: 100%;
     @include breakpoint(xl) {
       display: none;

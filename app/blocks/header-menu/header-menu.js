@@ -1,18 +1,27 @@
+let hamburder = document.querySelector('#hamburger'),
+    menu = document.querySelector('.header-menu'),
+    submenuClose = document.querySelectorAll('.submenu__close');
 
-$('#hamburger').change(function(){
-  if ( $(this).prop("checked") == true ) {
-    $('.header-menu').addClass('open');
+hamburder.addEventListener('change', function() {
+  if ( this.checked ) {
+    menu.classList.add('open');
   } else {
-    $('.header-menu').removeClass('open');
+    menu.classList.remove('open');
+  }
+});
+
+$('.header-menu__item').click(function(e){
+  if (e.target == this && !!this.querySelector('.submenu')) {
+    this.querySelector('.submenu').classList.toggle('active');
   }
 })
 
-$('.header-menu__item a').click(function(){
-  $(this).next().toggleClass('active');
+submenuClose.forEach( item => item.addEventListener('click', function() {
+  this.parentElement.classList.remove('active');
+}));
 
-})
-
-$('.submenu__close a').click(function(){
-  $(this).parents('.submenu').removeClass('active');
-})
+// $('.submenu__close a').click(function(){
+//   $(this).parents('.submenu').removeClass('active');
+//   console.log('back')
+// })
 

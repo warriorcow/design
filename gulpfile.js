@@ -11,6 +11,7 @@ const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
 const csso = require('gulp-csso');
 const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
 
 let jsLibs = [
   // 'node_modules/jquery/dist/jquery.js', // Jquery
@@ -84,6 +85,9 @@ function bundleJS() {
   gulp.src('app/blocks/**/*.js')
     .pipe(concat('scripts.js'))
     // .pipe(uglify())
+    .pipe(babel({
+			presets: ['@babel/env']
+		}))
     .pipe(gulp.dest('dist/js'));
 };
 
@@ -140,3 +144,4 @@ exports.fontsTransfer = fontsTransfer
 exports.imageTransfer = imageTransfer
 exports.watch = watch
 exports.clean = clean
+exports.babel = babel

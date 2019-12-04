@@ -3,9 +3,7 @@ mixin header-menu(data)
     .header-menu__wrap
       each item in data.items
         .header-menu__item
-          a(href=item.link)
-            +icon({icon: item.icon})
-            != item.name
+          
           if item.submenu
             ul.submenu
               li.submenu__close
@@ -18,6 +16,9 @@ mixin header-menu(data)
                         a(href=r.submenu_link)!= r.submenu_name
               li.submenu__all
                 a(href="#") Все виды жалюзи
+          a(href=item.link)
+            +icon({icon: item.icon})
+            != item.name
       .header-menu__sections
         a(href="#").header-new__link О нас
         a(href="#").header-new__link Блог

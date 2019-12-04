@@ -35,15 +35,15 @@
     @include breakpoint(lg) {
       display: block;
       flex: none;
-      &:after {
-        content: '>';
-        position: absolute;
-        top: 50%;
-        right: 60px;
-        font-weight: 900;
-        color: #676565;
-        transform: translateY(-50%);
-      }
+      // &:after {
+      //   content: '>';
+      //   position: absolute;
+      //   top: 50%;
+      //   right: 60px;
+      //   font-weight: 900;
+      //   color: #676565;
+      //   transform: translateY(-50%);
+      // }
     }
     &:not(:nth-last-child(2)) {
       border-right: 1px solid $nevada;
@@ -78,10 +78,11 @@
       justify-content: center;
       @include breakpoint(lg) {
         justify-content: flex-start;
-        width: 100%;
+        width: 70%;
         font-size: 14px;
         padding: 12px 15px;
         box-sizing: border-box;
+        
       }
       .icon {
         @include breakpoint(lg) {
@@ -118,6 +119,20 @@
         transition: .3s;
         overflow: auto;
         height: calc(100vh - 57px);
+      }
+      & + a {
+        @include breakpoint(lg) {
+          &:after {
+            content: '>';
+            position: absolute;
+            top: 50%;
+            right: 60px;
+            font-weight: 900;
+            color: #676565;
+            transform: translateY(-50%);
+            pointer-events: none;
+          }
+        }
       }
       &__box {
         display: flex;
