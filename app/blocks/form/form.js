@@ -4,7 +4,7 @@ $('input[type=file]').change(function() {
 });
 
 function thx(e) {
-  e.find('.thx').fadeIn().css('display', 'flex').siblings().css({
+  $(e).find('.thx').fadeIn().css('display', 'flex').siblings().css({
     'opacity': '0',
     'visibility': 'hidden'
   });
