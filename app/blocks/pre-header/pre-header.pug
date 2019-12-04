@@ -22,6 +22,13 @@ mixin pre-header(data)
           placeholder: 'Ваш телефон'
         }]
       })
+      +btn({
+        btn_link: data.link_more,
+        text: 'Посмотреть все работы',
+        mods: ['violet'],
+        add_Class: 'pre-header__btn',
+        btn_link: '/gallery/'
+      })
     if data.ad
       .pre-header__ad
         p БЕСПЛАТНЫЙ ВЫЕЗД ДИЗАЙНЕРА ПО МОСКВЕ И МОСКОВСКОЙ ОБЛАСТИ
