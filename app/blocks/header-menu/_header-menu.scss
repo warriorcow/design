@@ -14,7 +14,7 @@
   &__wrap {
     display: flex;
     padding-top: 20px;
-    padding-bottom: 20px;
+    // padding-bottom: 20px;
     background-color: #ffffff;
     @include breakpoint(lg) {
       overflow: auto;
@@ -32,6 +32,18 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    padding-bottom: 20px;
+    &:not(:nth-last-child(2)) {
+      &:before {
+        position: absolute;
+        height: 60%;
+        width: 1px;
+        content: '';
+        top: 0;
+        right: 0;
+        background-color: $nevada;
+      }
+    }
     @include breakpoint(lg) {
       display: block;
       flex: none;
@@ -44,12 +56,6 @@
       //   color: #676565;
       //   transform: translateY(-50%);
       // }
-    }
-    &:not(:nth-last-child(2)) {
-      border-right: 1px solid $nevada;
-      @include breakpoint(lg) {
-        border: none;
-      }
     }
     &:nth-last-child(-n+3) .submenu {
       left: auto;
