@@ -30,6 +30,9 @@ body {
 
 main {
   overflow-x: hidden;
+  div:last-of-type .row {
+    margin-bottom: 0;
+  }
 }
 
 a {
