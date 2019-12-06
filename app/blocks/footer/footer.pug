@@ -1,118 +1,131 @@
-footer.footer
-  .container-new.container-new_lightgray
-    .row
-      .footer__wrapper
-        .footer__column
-          a(href="/").footer__logo
-            img(src="../img/logo.png")
+mixin footer(data)
+  footer.footer
+    if data.callback
+      +callback({
+        addClass: 'footer__callback',
+        title: 'Получайте на почту последние новости о текстильном дизайне для интерьера!',
+        items: [{
+          type: 'text',
+          placeholder: 'Ваше имя'
+        },{
+          type: 'email',
+          placeholder: 'Ваш E-mail'
+        }]
+      })
+    .container-new.container-new_lightgray
+      .row
+        .footer__wrapper
+          .footer__column
+            a(href="/").footer__logo
+              img(src="../img/logo.png")
 
-        .footer__column  
-          .footer__category
-            a(href="#").footer__category-name Шторы
-            ul.footer__category-list
-              li 
-                a(href="#") Классические шторы
-              li 
-                a(href="#") Современные шторы
-              li 
-                a(href="#") Римские шторы
-              li 
-                a(href="#") Японские шторы
-              li 
-                a(href="#") Австрийские шторы
-              li 
-                a(href="#") Французские шторы
-              li 
-                a(href="#") Пошив подушек на заказ
-              li 
-                a(href="#") Пошив покрывал на заказ
-          
-        .footer__column  
-          .footer__category
-            a(href="#").footer__category-name Шторы
-            ul.footer__category-list
-              li 
-                a(href="#") Классические шторы
-              li 
-                a(href="#") Современные шторы
-              li 
-                a(href="#") Римские шторы
-              li 
-                a(href="#") Японские шторы
-              li 
-                a(href="#") Австрийские шторы
-              li 
-                a(href="#") Французские шторы
-              li 
-                a(href="#") Пошив подушек на заказ
-              li 
-                a(href="#") Пошив покрывал на заказ
-          
-        .footer__column  
-          .footer__category
-            a(href="#").footer__category-name Шторы
-            ul.footer__category-list
-              li 
-                a(href="#") Классические шторы
-              li 
-                a(href="#") Современные шторы
-              li 
-                a(href="#") Римские шторы
-              li 
-                a(href="#") Японские шторы
-              li 
-                a(href="#") Австрийские шторы
-              li 
-                a(href="#") Французские шторы
-              li 
-                a(href="#") Пошив подушек на заказ
-              li 
-                a(href="#") Пошив покрывал на заказ
-          
-        .footer__column  
-          .footer__category
-            a(href="#").footer__category-name Шторы
-            ul.footer__category-list
-              li 
-                a(href="#") Классические шторы
-              li 
-                a(href="#") Современные шторы
-              li 
-                a(href="#") Римские шторы
-              li 
-                a(href="#") Японские Шторы
-            a(href="#").footer__category-name Шторы
-            ul.footer__category-list
-              li 
-                a(href="#") Классические шторы
-              li 
-                a(href="#") Современные шторы
-              li 
-                a(href="#") Римские шторы
-              li 
-                a(href="#") Японские шторы
+          .footer__column  
+            .footer__category
+              a(href="#").footer__category-name Шторы
+              ul.footer__category-list
+                li 
+                  a(href="#") Классические шторы
+                li 
+                  a(href="#") Современные шторы
+                li 
+                  a(href="#") Римские шторы
+                li 
+                  a(href="#") Японские шторы
+                li 
+                  a(href="#") Австрийские шторы
+                li 
+                  a(href="#") Французские шторы
+                li 
+                  a(href="#") Пошив подушек на заказ
+                li 
+                  a(href="#") Пошив покрывал на заказ
+            
+          .footer__column  
+            .footer__category
+              a(href="#").footer__category-name Шторы
+              ul.footer__category-list
+                li 
+                  a(href="#") Классические шторы
+                li 
+                  a(href="#") Современные шторы
+                li 
+                  a(href="#") Римские шторы
+                li 
+                  a(href="#") Японские шторы
+                li 
+                  a(href="#") Австрийские шторы
+                li 
+                  a(href="#") Французские шторы
+                li 
+                  a(href="#") Пошив подушек на заказ
+                li 
+                  a(href="#") Пошив покрывал на заказ
+            
+          .footer__column  
+            .footer__category
+              a(href="#").footer__category-name Шторы
+              ul.footer__category-list
+                li 
+                  a(href="#") Классические шторы
+                li 
+                  a(href="#") Современные шторы
+                li 
+                  a(href="#") Римские шторы
+                li 
+                  a(href="#") Японские шторы
+                li 
+                  a(href="#") Австрийские шторы
+                li 
+                  a(href="#") Французские шторы
+                li 
+                  a(href="#") Пошив подушек на заказ
+                li 
+                  a(href="#") Пошив покрывал на заказ
+            
+          .footer__column  
+            .footer__category
+              a(href="#").footer__category-name Шторы
+              ul.footer__category-list
+                li 
+                  a(href="#") Классические шторы
+                li 
+                  a(href="#") Современные шторы
+                li 
+                  a(href="#") Римские шторы
+                li 
+                  a(href="#") Японские Шторы
+              a(href="#").footer__category-name Шторы
+              ul.footer__category-list
+                li 
+                  a(href="#") Классические шторы
+                li 
+                  a(href="#") Современные шторы
+                li 
+                  a(href="#") Римские шторы
+                li 
+                  a(href="#") Японские шторы
 
-        .footer__column
-          a(href="mailto:info@ok.design") info@ok.design
-          a(href="tel:+74994909885") 
-            strong +7 (499) 490-98-85
-          span г.Одинцово, Можайское шоссе, д.100А, п.5
-          +btn({
-            text: 'Заказать звонок',
-            btn_data: 'consultate',
-            add_Class: 'footer__btn'
-          })
-          +social({
-            name: ['vk', 'fb', 'ok', 'inst']
-          })
-       
-  .container-new.container-new_dark
-    .row
-      .footer__bottom    
-        .footer__policy
-          a(href="#") Политика конфиденциальности
-        .footer__copyright OK.DESIGN © 2019
-        .footer__developer
-          span Создание сайта:
-          a(href="https://texterra.ru/", target="_blank")
-            +icon({icon: 'texterra'})
+          .footer__column
+            a(href="mailto:info@ok.design") info@ok.design
+            a(href="tel:+74994909885") 
+              strong +7 (499) 490-98-85
+            span г.Одинцово, Можайское шоссе, д.100А, п.5
+            +btn({
+              text: 'Заказать звонок',
+              btn_data: 'consultate',
+              add_Class: 'footer__btn'
+            })
+            +social({
+              name: ['vk', 'fb', 'ok', 'inst']
+            })
+        
+    .container-new.container-new_dark
+      .row
+        .footer__bottom    
+          .footer__policy
+            a(href="#") Политика конфиденциальности
+          .footer__copyright OK.DESIGN © 2019
+          .footer__developer
+            span Создание сайта:
+            a(href="https://texterra.ru/", target="_blank")
+              +icon({icon: 'texterra'})

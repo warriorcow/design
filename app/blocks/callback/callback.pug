@@ -1,5 +1,5 @@
 mixin callback(data)
-  .container-new.callback(style="background-image: url("+data.img+")")
+  .container-new.callback(class=addClass('callback', data.mods, data.addClass), style="background-image: url("+data.img+")")
     .row.callback__wrap
       form.callback__form
         .callback__thx Спасибо за заявку! Мы скоро свяжемся с Вами. 

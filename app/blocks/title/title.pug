@@ -2,7 +2,7 @@ mixin title(data)
   if data.link_more
     .link-title
       #{data.tag}.title(class=addClass('title', data.mods, data.addClass) id=data.id)
-        != data.text
+        !=data.text
       +btn({
         btn_link: data.link_more,
         text: 'Посмотреть все работы',
@@ -13,6 +13,6 @@ mixin title(data)
       if data.link
         a.title__link(href=data.link, class= data.link_mods ? 'title__link_' + data.link_mods : '')= data.text
       else 
-        != data.text
+        !=data.text
       if data.subtext
         span!= data.subtext

@@ -33,6 +33,7 @@ html(lang="ru")
       include /app/blocks/stride/stride
       include /app/blocks/catalog/catalog
       include /app/blocks/autor/autor
+      include /app/blocks/footer/footer
 
     block header
       header
@@ -46,7 +47,9 @@ html(lang="ru")
       main
     
     block footer
-      include /app/blocks/footer/footer
+      +footer({
+        callback: true
+      })
       include /app/blocks/modal/modal
       div(style='display: none;')
         include ../../dist/img/icons/icons.svg

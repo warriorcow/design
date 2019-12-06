@@ -1,19 +1,17 @@
 extends /app/templates/default
 
 block main
-  main
+  main.inside
     .container-new
       .row
         +breadcrumbs({
           items: ['Главная', 'Галерея работ' ]
         })
-      .row
         +title({
           tag: 'h1',
           mods: ['h1'],
           text: 'Наши работы'
         })
-      .row
         +tags({
           items: ['Дома', 'Квартиры' , 'Офисы', 'Спальни', 'Офисы', 'Офисы', 'Веревочные']
         })

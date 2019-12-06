@@ -33,6 +33,9 @@ main {
   div:last-of-type .row {
     margin-bottom: 0;
   }
+  &.inside {
+    margin-bottom: 60px;
+  }
 }
 
 a {

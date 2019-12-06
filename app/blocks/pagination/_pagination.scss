@@ -7,9 +7,11 @@
   list-style: none;
   justify-content: center;
   li {
-
     &:not(:last-child) {
       margin-right: 25px;
+    }
+    @include breakpoint(md) {
+      display: none;
     }
     a {
       display: block;
@@ -26,6 +28,34 @@
     }
   }
   .pagination {
+    &__prev a {
+      padding-left: 30px;
+      text-align: right;
+      @include breakpoint(md) {
+        text-align: center;
+      }
+      &:before {
+        transform: translateY(-50%) rotate(-135deg);
+        left: 0;
+        @include breakpoint(md) {
+          left: 20%;
+        }
+      }
+    }
+    &__next a {
+      padding-right: 30px;
+      text-align: left;
+      @include breakpoint(md) {
+        text-align: center;
+      }
+      &:before {
+        transform: translateY(-50%) rotate(45deg);
+        right: 0;
+        @include breakpoint(md) {
+          right: 20%;
+        }
+      }
+    }
     &__prev,
     &__next {
       display: block;
@@ -33,15 +63,24 @@
       @include breakpoint(md) {
         flex: 0 1 50%;
         max-width: 50%;
+        background-color: $locust;
+        color: $white;
+        border-radius: 30px;
       }
       a {
         border-radius: 30px;
         color: $locust;
         position: relative;
         font-size: 16px;
+        @include breakpoint(md) {
+          color: $white;
+        }
         &:hover {
           color: $locust;
           text-decoration: none;
+          @include breakpoint(md) {
+            color: $white;
+          }
         }
         &:before {
           content: '';
@@ -51,23 +90,10 @@
           border-top: 1.5px solid $locust;
           border-right: 1.5px solid $locust;
           top: 50%;
+          @include breakpoint(md) {
+            border-color: $white;
+          }
         }
-      }
-    }
-    &__prev a {
-      padding-right: 30px;
-      text-align: right;
-      &:before {
-        transform: translateY(-50%) rotate(-135deg);
-        left: 30px;
-      }
-    }
-    &__next a {
-      padding-left: 30px;
-      text-align: left;
-      &:before {
-        transform: translateY(-50%) rotate(45deg);
-        right: 30px;
       }
     }
   }

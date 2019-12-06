@@ -1,14 +1,31 @@
 .tags {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 50px;
+  @include breakpoint(md) {
+    margin: 50px -10px 0;
+  }
   .tags {
     &__item {
-      padding: 10px 50px;
+      padding: 6px 50px;
       margin-bottom: 20px;
       border: 2px solid #D3CFCF;
       border-radius: 50px;
       font-size: 17px;
+      box-sizing: border-box;
       text-decoration: none;
+      @include breakpoint(md) {
+        padding: 6px 20px;
+        max-width: calc(50% - 20px);
+        flex: 1 1 calc(50% - 20px);
+        margin: 0 10px 20px;
+        width: 100%;
+        text-align: center;
+      }
+      @include breakpoint(sm) {
+        max-width: calc(100% - 20px);
+        flex: 1 1 calc(100% - 20px);
+      }
       &.active {
         background-color: #76477D;
         color: #fff;
@@ -18,6 +35,9 @@
       }
       &:not(:last-of-type) {
         margin-right: 20px;
+        @include breakpoint(md) {
+          margin-right: 10px;
+        }
       }
     }
   }
