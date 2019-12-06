@@ -1,0 +1,45 @@
+extends /app/templates/default
+
+block main
+  main.inside
+    .container-new
+      .row
+        +breadcrumbs({
+          items: ['Главная', 'Галерея работ', 'Кейс']
+        })
+        +title({
+          tag: 'h1',
+          mods: ['h1', 'default'],
+          text: 'Сотрудники'
+        })
+        //- +tags({
+        //-   items: ['Дома', 'Квартиры' , 'Офисы', 'Спальни', 'Офисы', 'Офисы', 'Веревочные']
+        //- })
+    .container-new
+      .row.row_flex
+        .leftside
+          +staff({})
+          +staff({})
+          +staff({})
+          include /app/blocks/pagination/pagination
+
+        .rightside
+          +tags({
+            mods: ['full'],
+            items: ['Дома', 'Квартиры' , 'Офисы', 'Спальни', 'Офисы', 'Офисы', 'Веревочные']
+          })
+          +form({
+            mods: ['side'],
+            title: 'Получите бесплатную консультацию у дизайнеров ',
+            btn_text: 'Получить консультацию',
+            items: [{
+              type: 'tel',
+              required: true,
+              placeholder: 'Ваш телефон'
+            }]
+          })
+         
+    .container-new
+      .row
+        
+      

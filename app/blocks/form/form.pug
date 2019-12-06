@@ -4,7 +4,7 @@ mixin form(data)
     .form__title!=data.title
     input.form__name(type="hidden", value="")
     each item in data.items
-      input(type=item.type, placeholder=item.placeholder).form__input
+      input(type=item.type, placeholder=item.placeholder, required=item.required).form__input
     if data.foto_insert
       .form__box
         label.btn.form__btn.btn_file
@@ -13,7 +13,7 @@ mixin form(data)
         +btn({
           mods: data.btn_mods,
           add_Class: 'form__btn',
-          type_btn: 'button',
+          type_btn: 'submit',
           text: data.btn_text
         })
       .form__policy Я согласен с условиями 
@@ -25,7 +25,7 @@ mixin form(data)
           a(href="#", target="_blank") пользовательского соглашения
         +btn({
           add_Class: 'form__btn',
-          type_btn: 'button',
+          type_btn: 'submit',
           mods: data.btn_mods,
           text: data.btn_text
         }) 

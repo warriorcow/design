@@ -1,5 +1,5 @@
 mixin tags(data)
-  .tags
+  .tags(class=addClass('tags', data.mods, data.addClass))
     a(href="#").tags__item.active Все работы
     each item in data.items
      a(href="#").tags__item!=item

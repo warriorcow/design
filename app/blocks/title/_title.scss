@@ -10,25 +10,7 @@
     text-transform: none;
     text-shadow: none;
     position: relative;
-    &_white {
-      color: $white;
-    }
-    &_dark {
-      color: $main;
-    }
-    &_small {
-      font-size: 40px;
-      font-weight: 700;
-      text-transform: uppercase;
-      @include breakpoint(sm) {
-        font-size: 32px;
-      }
-      span {
-        font-size: 20px;
-        display: block;
-        font-weight: 500;
-      }
-    }
+
     &_h1 {
       font-size: 50px;
       font-weight: 700;
@@ -57,6 +39,28 @@
       @include breakpoint(md) {
         display: none;
       }
+    }
+    &_white {
+      color: $white;
+    }
+    &_dark {
+      color: $main;
+    }
+    &_small {
+      font-size: 40px;
+      font-weight: 700;
+      text-transform: uppercase;
+      @include breakpoint(sm) {
+        font-size: 32px;
+      }
+      span {
+        font-size: 20px;
+        display: block;
+        font-weight: 500;
+      }
+    }
+    &_default {
+      text-transform: unset;
     }
   }
 }

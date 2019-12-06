@@ -1,0 +1,31 @@
+mixin staff(data)
+  .staff(class=addClass('staff', data.mods, data.addClass))
+    .staff__left
+      .staff__foto(style="background-image: url(../img/Olga_B.jpg)")
+      
+      - if (data !== undefined)
+        - if (data.mods !== undefined)
+          - if (data.mods !== undefined)
+          .staff__portfolio
+            a.staff__portfolio-item(style="background-image: url(../img/Olga_B.jpg)", href="../img/Olga_B.jpg", data-fancybox)
+            a.staff__portfolio-item(style="background-image: url(../img/Olga_B.jpg)", href="../img/Olga_B.jpg", data-fancybox)
+            a.staff__portfolio-item(style="background-image: url(../img/Olga_B.jpg)", href="../img/Olga_B.jpg", data-fancybox)
+        
+
+    .staff__right
+      .staff__name Куренкова Мария Павловна
+      .staff__post Главный дизайнер
+      .staff__experience
+        .staff__title Стаж работы
+        span 30 лет
+      .staff__projects 
+        .staff__title Проекты
+        
+        p Lorem ipsum dolor sit amet.
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, nostrum!
+        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci officia, optio perspiciatis provident dignissimos voluptatem.
+        ol
+          li Lorem ipsum dolor sit amet.
+          li Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, at.
+          li Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis cumque facilis est temporibus aspernatur perspiciatis.
+

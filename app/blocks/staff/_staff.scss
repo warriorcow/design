@@ -1,0 +1,85 @@
+.staff {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  @include breakpoint(lg) {
+    flex-direction: column;
+  }
+  &:not(:last-of-type) {
+    margin-bottom: 50px;
+  }
+  &__left {
+    max-width: 370px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    @include breakpoint(lg) {
+      margin: 0 auto;
+    }
+  }
+  &__foto {
+    height: 360px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__portfolio {
+    height: 100px;
+    display: flex;
+    margin: 10px -2.5px 0;
+    &-item {
+      max-width: calc(33.33% - 5px);
+      width: 100%;
+      margin: 0 2.5px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__right {
+    width: calc(100% - 370px);
+    padding-left: 20px;
+    color: #393939;
+    font-size: 20px;
+    box-sizing: border-box;
+    @include breakpoint(lg) {
+      width: 100%;
+      margin-top: 30px;
+    }
+    @include breakpoint(md) {
+      padding-left: 0;
+    }
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+  }
+  &__name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  &__post {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  &__experience {
+    margin-top: 40px;
+    font-size: 20px;
+  }
+  &__projects {
+    margin-top: 20px;
+    > .staff__title {
+      margin-bottom: 10px;
+    }
+  }
+  ol {
+    padding-left: 20px;
+    li {
+      margin-bottom: 5px;
+    }
+  }
+  p {
+    font-size: inherit;
+    margin-bottom: 10px;
+  }
+}

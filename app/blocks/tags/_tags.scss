@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
+
   @include breakpoint(md) {
     margin: 50px -10px 0;
   }
@@ -37,6 +38,26 @@
         margin-right: 20px;
         @include breakpoint(md) {
           margin-right: 10px;
+        }
+      }
+    }
+  }
+  &_full {
+    // position: sticky;
+    // top: 170px;
+    width: 100%;
+    margin: 0;
+    @include breakpoint(lg) {
+      // top: 90px;
+    }
+    .tags {
+      &__item {
+        width: 100%;
+        // max-width: 100%;
+        // flex: 1 1 100%;
+        text-align: center;
+        &:not(:last-of-type) {
+          margin-right: 0;
         }
       }
     }
